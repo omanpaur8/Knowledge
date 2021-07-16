@@ -1,0 +1,567 @@
+\section{ÁLGEBRA}
+
+\subsection{Vectores}
+Un vector es la linea que une dos puntos, la cual tiene magnitud (longitud) y dirección. Está compuesto por componentes.
+
+\textbf{Definición geométrica:} El conjunto de todos los segmentos de recta dirigidos equivalentes a un segmento de
+recta dirigido dado se llama vector
+\subsubsection{Suma y resta}
+Coordenada a coordenada
+\subsubsection{Multiplicación por un escalar}
+Se multiplica cada coordenada
+
+\subsubsection{Norma de un vector}
+$||\overrightarrow{a}||=\sqrt{a_1^2+a_2^2+a_3^2}$
+
+\subsubsection{Dirección de un vector}
+$\theta=arctan(\frac{b}{a})$
+
+\subsubsection{Vector unitario}
+$u=\frac{\overrightarrow{v}}{||\overrightarrow{v}||}$
+
+\subsubsection{Producto punto}
+Se multiplican las coordenadas y se suman. Da un $\#$.
+
+$\overrightarrow{u}\cdot\overrightarrow{v}=||\overrightarrow{u}||||\overrightarrow{v}||cos(\theta)$
+
+\subsubsection{Ángulo entre 2 vectores}
+$cos\theta=\dfrac{\overrightarrow{a}\cdot \overrightarrow{b}}{||\overrightarrow{a}||||\overrightarrow{b}||}$
+
+\subsection{Proyecciones}
+\begin{itemize}
+	\item Proyección de u sobre v
+	$proy_{\overrightarrow{v}}\overrightarrow{u}=\dfrac{\overrightarrow{u}\cdot \overrightarrow{v}}{\overrightarrow{v}\cdot \overrightarrow{v}}\overrightarrow{v}=\dfrac{\overrightarrow{u}\cdot \overrightarrow{v}}{|\overrightarrow{v}|^2}\overrightarrow{v}$.
+	\item La $proy_{\overrightarrow{v}}\overrightarrow{u}$ es paralelo a $\overrightarrow{v}$.
+	\item $u-proy_{\overrightarrow{v}}\overrightarrow{u}$ es ortogonal a $\overrightarrow{v}$.
+\end{itemize}
+
+\subsubsection{Distancia entre 2 puntos}
+\begin{enumerate}
+	\item Encontrar el vector de A a B $\overrightarrow{AB}=B-A$
+	\item La distancia es la norma $||\overrightarrow{AB}||$
+\end{enumerate}
+
+\subsubsection{Cosenos directores}
+Los ángulos directores del vector son: $\overrightarrow{v}=(x,y,z)$
+
+\begin{itemize}
+	\item $cos\alpha=\dfrac{x}{||\overrightarrow{v}||}$
+	\item $cos\beta=\dfrac{y}{||\overrightarrow{v}||}$
+	\item $cos\gamma=\dfrac{z}{||\overrightarrow{v}||}$
+	\item $cos^2\alpha+cos^2\beta+cos^2\gamma=1$
+\end{itemize}
+
+
+\subsubsection{Producto cruz}
+El producto cruz da como resultado un vector ortogonal o perpendicular a los vectores con los que se calcula. Para 2 vectores $\overrightarrow{u}=(u_1,u_2,u_3)$ y $\overrightarrow{v}=(v_1,v_2,v_3)$.
+
+$\overrightarrow{u} \times \overrightarrow{v}=
+\left|\begin{tabular}{ccc}
+$\hat{i}$ & $\hat{j}$ & $\hat{k}$\\
+$u_1$ & $u_2$ & $u_3$\\
+$v_1$ & $v_2$ & $v_3$
+\end{tabular}\right|=(u_2v_3-u_3v_2,u_3v_1-u_1v_3,u_1v_2-u_2v_1)
+$
+
+\begin{itemize}
+	\item $\overrightarrow{v} \times \overrightarrow{u}=-\overrightarrow{u} \times \overrightarrow{v}$
+	\item $||\overrightarrow{u} \times \overrightarrow{v}||= ||\overrightarrow{u}||||\overrightarrow{v}||sen(\theta)$
+	\item El área del paralelogramo que tiene lados $\overrightarrow{u}$ y $\overrightarrow{u}$  es $||\overrightarrow{u} \times \overrightarrow{v}||$
+	\item El volumen del parelepipedo formado por $\overrightarrow{u}$, $\overrightarrow{v}$ y $\overrightarrow{w}$ es $|(\overrightarrow{u} \times \overrightarrow{v})\cdot w|$
+\end{itemize}
+
+
+
+
+\subsubsection{Propiedades}
+\begin{itemize}
+	\item Dos vectores son paralelos si $\overrightarrow{v}=\alpha\overrightarrow{u}$
+	\item Dos vectores son paralelos si $\overrightarrow{u}\times \overrightarrow{v}=0$
+	\item Dos vectores son perpendiculares si $\overrightarrow{u}\cdot\overrightarrow{v}=0$
+\end{itemize}
+
+
+
+\subsection{Rectas y planos}
+\subsubsection{Ecuación paramétrica de recta}
+Pasa por el punto $a=(a_1,a_2,a_3)$ y tiene como vector director $\overrightarrow{d}=(d_1,d_2,d_3)$
+\begin{align*}
+	X=& a_1+d_1t\\
+	Y=& a_2+d_2t\\
+	Z=& a_3+d_3t\\
+\end{align*}
+\subsubsection{Ecuación simétrica de recta}
+$$\dfrac{x-a_1}{d_1}=\dfrac{y-a_2}{d_2}=\dfrac{z-a_3}{d_3}$$
+
+\subsubsection{Ecuación del plano}
+Pasa por el punto $P=(x_0,y_0,z_0)$ y tiene como vector normal o perpendicular al plano $\overrightarrow{n}=(n_1,n_2,n_3)$. Tener en cuenta que $n\cdot (vector\ plano)=0$
+$$n_1(x-x_0)+n_2(y-y_0)+n_3(z-z_0)=0$$
+
+\begin{itemize}
+	\item Dos planos son paralelos si sus vectores normales con paralelos
+	\item Dos planos son perpendiculares si sus vectores normales son perpendiculares.
+\end{itemize}
+\subsubsection{Tipos de pregunta}
+\begin{itemize}
+	\item Para ver si un punto está en la recta.
+	\begin{enumerate}
+		\item Reemplazar el punto en x, y y z.
+		\item Despejar t de cada ecuación
+		\item Conclusión. Si todas las t dan iguales el punto está en la recta. Si no dan iguales no está en la recta.
+	\end{enumerate}
+	\item Para encontrar la intersección entre 2 rectas
+	\begin{enumerate}
+		\item Igualar las ecuaciones
+		\item Despejar t de cada ecuación
+		\item Si la t se cancela y da 0=0, hay infinitas soluciones.Si da $\#=0$, no se interceptan.
+		\item Si todas las t dan iguales si hay intersección. Si no dan iguales no hay intersección.
+		\item Reemplazar t en cualquier ecuación para encontrar punto de intersección.
+	\end{enumerate}
+	\item Para encontrar la intersección entre recta y plano
+	\begin{enumerate}
+		\item Reemplazar la recta en el plano
+		\item Despejar t
+		\item Si la t se cancela y da 0=0, hay infinitas soluciones.Si da $\#=0$, no se interceptan.
+		\item Si la t no se cancela reemplazar en la recta para encontrar el punto de intersección
+	\end{enumerate}
+	\item Para encontrar un plano si dan una recta perpendicular.
+	\begin{enumerate}
+		\item $\overrightarrow{n}=\overrightarrow{d}$
+		\item Reemplazar en ecuación del plano.
+	\end{enumerate}
+	\item Para encontrar una recta si dan un plano perpendicular.
+	\begin{enumerate}
+		\item $\overrightarrow{d}=\overrightarrow{n}$
+		\item Reemplazar en las ecuaciones paramétricas
+	\end{enumerate}
+	
+	\item Para encontrar un plano si dan 3 puntos.
+	\begin{enumerate}
+		\item Fijar un punto (a)
+		\item Hallar 2 vectores con respecto a ese punto (ab y ac). Restar a b y a c el punto a
+		\item Hacer producto cruz para encontrar vector normal.
+		\item Reemplazar en la ecuación del plano el punto y el vector normal.
+	\end{enumerate}
+	\item Para encontrar la intersección entre 2 planos.
+	\begin{enumerate}
+		\item Volver las ecuaciones una matriz ampliada.
+		\item Hacer Gauss.
+	\end{enumerate}
+	\item Si dan 2 vectores en el plano y un punto y piden ecuación de plano.
+	\begin{enumerate}
+		\item Hacer producto cruz para encontrar vector normal
+		\item Reemplazar en la ecuación del plano el punto y el vector normal.
+	\end{enumerate}
+	\item Distancia entre dos planos paralelos
+	\begin{enumerate}
+		\item Encontrar un punto en cada plano
+		\item Armar vector con esos puntos
+		\item Encontrar la proyección sobre uno de los vectores normales
+		\item La norma de la proyección es la distancia entre los planos.
+		\item También se puede usar la fórmula $D=\dfrac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}$, donde D está al lado izquierdo del igual.
+	\end{enumerate}
+\end{itemize}
+
+\subsection{Matrices}
+Se escriben con letras mayúsculas. $A_{\underbrace{n}_{{filas}}\times \underbrace{m}_{columnas}}
+$
+\subsubsection{Suma y resta}
+Se hace coordenada a coordenada, las matrices deben tener el mismo tamaño
+\subsubsection{Multiplicación por un escalar}
+Se multiplica cada coordenada.
+\subsubsection{Multiplicación entre matrices}
+$A_{n\times m}B_{p\times q}=C_{n\times q}$. Para que se pueda hacer la multiplicación $m=q$
+
+\subsection{Eliminación de Gauss Jordan y Eliminación Gaussiana}
+
+\subsubsection{Operaciones}
+\begin{itemize}
+	\item Multiplicar (o dividir) un renglón por un número diferente de cero. $R_1\rightarrow aR1$
+	\item Sumar un múltiplo de un renglón a otro renglón. $R_2\rightarrow R2+aR1$
+	\item Intercambiar dos renglones. $R_1\leftrightarrow3$
+\end{itemize}
+
+\subsubsection{Forma escalonada reducida por renglones (Eliminación de Gauss Jordan)}
+
+$\begin{pmatrix}
+1_{(1)} & 0_{(4)} & 0_{(6)}\\
+0_{(2)} & 1_{(3)} & 0_{(6)}\\
+0_{(2)} & 0_{(4)} & 1_{(5)}\\
+\end{pmatrix}$
+\\
+
+Puede haber una fila de ceros en la parte inferior
+\subsubsection{Forma escalonada por renglones (Eliminación Gaussiana)}
+
+$\begin{pmatrix}
+1_{(1)} & \# & \#\\
+0_{(2)} & 1_{(3)} & \#\\
+0_{(2)} & 0_{(4)} & 1_{(5)}\\
+\end{pmatrix}$
+\\
+
+Puede haber una fila de ceros en la parte inferior
+\subsubsection{Tipos de solución}
+\begin{itemize}
+	\item Infinitas soluciones
+	
+	$\begin{pmatrix}
+	1 & \# & \#&|&\#\\
+	0 & 1 & \#&|&\#\\
+	0 & 0 & \underbrace{\#}_{=0}&|&\underbrace{\#}_{=0}\\
+	\end{pmatrix}$
+	\item No tiene solución
+	
+	$\begin{pmatrix}
+	1 & \# & \#&|&\#\\
+	0 & 1 & \#&|&\#\\
+	0 & 0 & \underbrace{\#}_{=0}&|&\underbrace{\#}_{\not=0}\\
+	\end{pmatrix}$
+	\item Única solución
+	
+	$\begin{pmatrix}
+	1 & \# & \#&|&\#\\
+	0 & 1 & \#&|&\#\\
+	0 & 0 & \underbrace{\#}_{\not=0}&|&\underbrace{\#}_{No importa}\\
+	\end{pmatrix}$
+\end{itemize}
+
+
+Se llama solución trivial cuando todas las variables valen cero.
+\subsection{Matriz inversa $A^{-1}$}
+
+\subsection{2x2}
+Si $A=\begin{pmatrix}
+a & b \\
+c & d 
+\end{pmatrix}$, entonces \\
+$A^{-1}=\dfrac{1}{\det(A)}\begin{pmatrix}
+d & -b \\
+-c & a 
+\end{pmatrix}$
+
+\subsubsection{Gauus}
+$$(A|I)\rightarrow^{gauss}(I|A^{-1})$$
+\subsubsection{Adjunta}
+$$A^{-1}=\dfrac{1}{|A|}adj(A)$$
+$$adj(A)=[cofactores]^T$$
+
+\subsubsection{Propiedades}
+\begin{itemize}
+	\item $AA^{-1}=I$
+	\item $(AB)^{-1}=B^{-1}A^{-1}$
+	\item $(\#A)^{-1}=\dfrac{1}{\#}A^{-1}$
+	\item $(A^T)^{-1}=(A^{-1})^T$
+	\item $(A^{-1})^{-1}=A$
+	\item Si A es invertible, el sistema tiene $A\overrightarrow{x}=\overrightarrow{b}$ se puede solucionar como $\overrightarrow{x}=A^{-1}\overrightarrow{b}$
+	\item Una matriz es invertible si $|A|\not=0$
+	\item Una matriz cuadrada que no tiene inversa se denomina singular y si es invertibles se denomina no singular.
+\end{itemize}
+
+\subsection{Transpuesta}
+$A^T:$ cambiar filas por columnas.
+\subsubsection{Propiedades}
+\begin{itemize}
+	\item Una matriz es simétrica si $A^T=A$
+	\item Una matriz es antisimétrica si $A^T=-A$
+	\item Una matriz es ortogonal si $A^TA=I$
+	\item $(A^T)^T=A$
+	\item $(AB)^T=B^TA^T$
+	\item $(\alpha A)T=\alpha A^T$
+	\item $(A+B)^T=A^T+B^T$
+	\item $(A^T)^{-1}=(A^{-1})^T6$
+\end{itemize}
+
+\subsection{Matrices elementales}
+Son matrices que se pueden obtener a partir de la matriz identidad, mediante una sola operación elemental (Multiplicación $cR_i$, suma de filas $R_j+cR_i$ e intercambio de filas $P_{ij}$)
+
+\begin{itemize}
+	\item Para realizar una operación a la Matriz A, se multiplica por la izquierda la matriz elemental.
+	\item Inversas de las elementales $(cR_i)^{-1}=\dfrac{1}{c}R_i$ $(R_j+cR_i)^{-1}=R_j-cR_i$ y $(P_{ij})^{-1}=P_{ij}$
+	\item $I=E_mE_{m-1}\dots E_{2}E_1A$ 
+	\item $A^{-1}=E_mE_{m-1}\dots E_{2}E_1$ y $A=E_1^{-1}E_{2}^{-1}\dots E_2^{m-1}E_1^{m}$
+\end{itemize}
+
+\subsection{Determinantes}
+\subsubsection{Matriz 2x2}
+
+$
+\left|\begin{tabular}{ccc}
+	a & b \\
+	c & d
+\end{tabular}\right|=ad-bc
+$
+
+\subsubsection{Sarrus}
+\begin{tikzpicture}
+\matrix [%
+matrix of math nodes,
+column sep=1em,
+row sep=1em
+] (sarrus) {%
+	a_{11} & a_{12} & a_{13} & a_{11} & a_{12} \\
+	a_{21} & a_{22} & a_{23} & a_{21} & a_{22} \\
+	a_{31} & a_{32} & a_{33} & a_{31} & a_{32} \\
+}; 
+
+\path ($(sarrus-1-3.north east)+(0.5em,0)$) edge[dotted] ($(sarrus-3-3.south east)+(0.5em,0)$)
+(sarrus-1-1)                          edge         (sarrus-2-2)
+(sarrus-2-2)                          edge         (sarrus-3-3)
+(sarrus-1-2)                          edge         (sarrus-2-3)
+(sarrus-2-3)                          edge         (sarrus-3-4)
+(sarrus-1-3)                          edge         (sarrus-2-4)
+(sarrus-2-4)                          edge         (sarrus-3-5)
+(sarrus-3-1)                          edge[dashed] (sarrus-2-2)
+(sarrus-2-2)                          edge[dashed] (sarrus-1-3)
+(sarrus-3-2)                          edge[dashed] (sarrus-2-3)
+(sarrus-2-3)                          edge[dashed] (sarrus-1-4)
+(sarrus-3-3)                          edge[dashed] (sarrus-2-4)
+(sarrus-2-4)                          edge[dashed] (sarrus-1-5);
+
+\foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
+\foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
+\end{tikzpicture}
+
+\subsubsection{Matriz nxn, cofactores}
+\begin{enumerate}
+	\item Escoger fila o columna con mas ceros
+	\item Poner signos imaginarios
+	\item Tapar y calcular el determinante de lo que queda.
+\end{enumerate}
+
+\subsubsection{Propiedades}
+\begin{itemize}
+	\item $|A|^T=|A|$
+	\item $|A^{-1}|=\dfrac{1}{|A|}$
+	\item $|\#A|=\#^n|A|$
+	\item $|AB|=|A||B|$
+	\item $|A+B|\not = |A|+|B|$
+	\item $|adjA|=|A|^{n-1}$
+	\item Si hay una fila o columna de ceros $|A|=0$
+	\item Si hay fila múltiplo de otra $|A|=0$
+\end{itemize}
+
+\subsection{Regla de Crammer}
+Teniendo $A=(a\ b\ c)$ y el vector de respuestas R
+\begin{enumerate}
+	\item Encontrar determinante de la matriz, si es cero el sistema no tiene solución.
+	\item $x=\dfrac{|R\  b\  c|}{|A|}$
+	\item $y=\dfrac{|a\  R\  c|}{|A|}$
+	\item $z=\dfrac{|a\  b\  R|}{|A|}$
+\end{enumerate}
+
+\subsection{Combinación lineal}
+
+\begin{itemize}
+	\item Escribir la combinación lineal $a\overrightarrow{u}+b\overrightarrow{v}+c\overrightarrow{w}=\overrightarrow{z}$
+	\item Poner vectores en matriz hacia abajo y Hacer gauss.
+	\item Lo que da son las contantes de la combinación lineal, a, b y c.
+\end{itemize}
+
+Después de hacer gauss
+\begin{itemize}
+	\item Rango: $\#$ de filas no nulas
+	\item Nulidad: $\#$ de filas nulas. También lo llaman grados de libertad.
+	\item Dimensión: Rango + nulidad
+\end{itemize}
+
+Explicar como se da la respuesta cuando una fila da ceros.
+
+\subsection{Independecia lineal}
+
+Un conjunto de vectores son L.I. si ningún vector se puede escribir como combinación de otros o si  $a\overrightarrow{u}+b\overrightarrow{v}+c\overrightarrow{w}=0$ tiene solo la solución trivial.
+
+Un conjunto de vectores son L.I. si el determinante de la matriz conformada por los vectores es distinta de cero.
+
+Si al hacer Gauss se llega a la identidad. Es lo mismo que ninguno se pueda escribir en términos de otro.
+
+
+
+\subsection{Diagonalización}
+\begin{enumerate}
+	\item Hacer A-$\lambda I$, es restarle $\lambda$ a la diagonal.
+	\item Calcular el determinante de la matriz anterior
+	\item Igualar a cero el determinante y despejar $\lambda$ que son los autovalores.
+	\item Reemplazar cada $\lambda$ en la matriz del paso 1 y hacer gauss para encontrar los autovectores.
+	\item Encontrar matriz de autovectores P. Si piden que sea ortogonal, normalizar cada vector.
+	\item Encontrar la inversa de P
+	\item Hacer $D=P^{-1}AP$, debe dar una diagonal con los autovalores.
+	\item $A^n=PD^nP^{-1}$
+\end{enumerate}
+
+\subsection{Espacios Vectoriales}
+Conjunto de vectores que cumple los siguientes 10 axiomas
+\begin{enumerate}
+	\item Cerradura bajo la suma, si $x \text{ y } y  \in V$, $x+y \in V$
+	\item Ley asociativa, si $ x, y, z \in V$, $(x+y)+z=x+(y+z)$
+	\item Vector cero o idéntico aditivo $x+0=0+x=x$
+	\item Inverso aditivo, si $x \in V$ $x+(-x)=0$
+	\item Ley conmutativa de la suma, si $x \text{ y } y  \in V$ $x+y=y+x$
+	\item Cerradura bajo la multiplicación por escalar, si $x \in V$  $\alpha x \in V$
+	\item Ley distributiva 1, si $x \text{ y } y  \in V$  y $\alpha$ y $\beta$ son escalares $\alpha(x+y)=\alpha x+\alpha y$
+	\item Ley distributiva 2,  $x \in V$  y $\alpha$ y $\beta$ son escalares $(\alpha + \beta)x=\alpha x+\beta x$
+	\item Ley asociativa de la multiplicación por escalares, si $x \in V$ $\alpha(\beta x)=(\alpha \beta)x$
+	\item Para cada vector $x \in V$, $1x=x$
+\end{enumerate}
+
+\subsection{Subespacios Vectoriales}
+Un conjunto $H$ es un subespacio de $V$ si se cumple la cerradura sobre la suma y la cerradura de multiplicación por escalar y contiene al cero.
+
+\subsection{Conjunto Generado}
+Un conjunto de vectores $v_1,v_2,\dots,v_n$ generan a $V$ si todo vector en $V$ se puede escribir como una combinación lineal de $v_1,v_2,\dots,v_n$.
+
+Si $v_1,v_2,\dots,v_n$ son vectores de un espacio vectorial V, entonces todas las combinaciones lineales de estos vectores forman un espacio generado y este a su vez es un subespacio del espacio V.
+
+\subsection{Bases}
+Un conjunto de vectores $v_1,v_2,\dots,v_n$ es una base para un espacio $V$ si 
+\begin{itemize}
+	\item $v_1,v_2,\dots,v_n$ son linealmente independientes
+	\item $v_1,v_2,\dots,v_n$ generan a $V$
+\end{itemize}
+
+\begin{itemize}
+	\item La dimensión de un espacio vectorial (dim V) es el número de vectores que haya en las bases.
+	\item La nulidad es la dimensión del espacio nulo $N_A$. El espacio nulo es la solución  de $Ax=0$
+	\item La base del espacio generado son los 1's que quedan al reducir.
+	\item Todo vector en el espacio Fila $R_A$ de una matriz es ortogonal a todo vector en su espacio nulo.
+	\item El rango es el número de pivotes en la forma escalonada.
+	\item Rango+Nulidad=Columnas
+	\item Imagen A=$C_A$
+\end{itemize}
+
+\subsubsection{Cambio de Base}
+
+Matriz de transición de la Base 1 a la Base 2
+\begin{enumerate}
+	\item Plantear el sistema 
+	$\begin{pmatrix}
+	B2 | B1
+	\end{pmatrix}$
+	\item Reducir usando gauus jordan
+	$\begin{pmatrix}
+	I | A
+	\end{pmatrix}$, $A$ es la matriz de transición de la Base 1 a la Base 2
+	\item Para cambiar un vector de Base 1 a Base 2 $(X)_{B_2}=A(X)_{B_1}$
+	\item $A^{-1}$ es la matriz de transición de la Base 2 a la Base 1
+\end{enumerate}
+
+\subsection{Transformaciones lineales}
+Una Transformación $T:V\rightarrow W$ es lineal si
+\begin{itemize}
+	\item $T(u+v)=T_u+T_v$
+	\item $T(\alpha v)=\alpha T_v$
+\end{itemize}
+
+Propiedades
+
+\begin{itemize}
+	\item El nucleo o kernel $nuT$ es la solución de $T_v=0$
+	\item La imagen de T son las soluciones de $T_v=W$
+	\item La nulidad de T es $dim\  nuT$
+	\item El rango de T es $dim\ Imagen\ T$
+	\item (Ejemplo 2, pag 500)Si se quiere que una transformación sea un plano se encuentra la base del plano, se transforman los vectores de la base y se transforma (x,y,z) en terminos de lo anterior. Es equivalente a despejar una letra y armar vector con sumas de x, y y z.
+\end{itemize}
+
+La matriz de transformación $A_T$
+\begin{itemize}
+	\item Si se tiene la base canónica
+	\begin{itemize}
+		\item Aplicar T a vectores de la base.
+		\item Armar $A_T$ con las transformaciones como columnas.
+	\end{itemize}
+	\item (Pag 514) Transformar elementos de la Base 11, luego resolver $\begin{pmatrix}
+	B2 | B1_T
+	\end{pmatrix}$. La matriz que queda es la matriz de transformación
+	\item (Pag 515) Si se tienen 2 bases no estándar $A_T=A_2^{-1}CA_1$ donde
+	
+	C: Matriz de coeficientes de la transformación.
+	
+	 $A_1$: matriz de transición de la base 1 a la base estándar.
+	 
+	 $A_2$: matriz de transición de la base 2 a la base estándar.
+\end{itemize}
+
+\subsection{Ortonormalización de Gram-Schmidt}
+Sea $S={v_1,v_2,\dots,v_n}$ una base de H
+
+\begin{enumerate}
+	\item Hacer $u_1=v_1$
+	\item $u_2=v_2-\dfrac{v_2\cdot u_1}{u_1\cdot u_1}u_1$
+	\item $u_3=v_3-\dfrac{v_3\cdot u_1}{u_1\cdot u_1}u_1-\dfrac{v_3\cdot
+	u_2}{u_2\cdot u_2}u_2$
+	\item Normalizar $u_1,u_2,u_3$
+\end{enumerate}
+
+Una matriz es ortogonal si $Q^{-1}=Q^T$
+
+\subsection{Proyección ortonormal}
+
+La base debe ser ortonormal
+
+$Proy_HV=(V\cdot u_1)u_1+(V\cdot u_2)u_2+(V\cdot u_3)u_3$
+\subsection{Complemento ortogonal}
+
+\begin{itemize}
+	\item $H^{\perp}$: Complemento ortogonal, son los x tal que $x\cdot h=0, \ h\in H$
+	\item El complemento ortogonal de W es el mismo espacio nulo de la matriz A cuyas filas son una base para el espacio W .
+	\item $Dim\ H + Dim\ H^{\perp}=n$
+	\item Si se tiene una  base, tomar la base como filas de una matriz y encontrar base para espacio nulo de esa matriz.
+	\item $v=h+p=proy_Hv+proy_{H^{\perp}}v$
+\end{itemize}
+
+
+
+
+
+
+\section{R}
+Funciones para exploración de datasets
+\begin{itemize}
+	\item head(): Imprime las primeras 6 posiciones
+	\item tail(): Imprime las últimas 6 posiciones
+	\item class(): Imprime la clase del objeto
+	\item length(): 
+	\item dim():
+	\item summary(): Resumen dependiendo del tipo de parámetro
+	\item str(): Da la estructura del objeto
+\end{itemize}
+
+Funciones comunes
+\begin{itemize}
+	\item sqrt():
+	\item mean():
+	\item sum():
+	\item var():
+	\item sd():
+	\item exp(): 
+	\item sin(): 
+	\item cos(): 
+	\item log(): 
+\end{itemize}
+
+Creación de vectores
+\begin{itemize}
+	\item c(): Sirve para crear un vector o para concatenar
+	\item objeto1 = c(1,2,3,4)
+	\item diez-cuatros = rep(4,10)
+	\item cero-al-uno = seq(0,1, by = 0.1 )
+	\item dos-al-ocho = 2:8
+	\item diez-al-1 = 10:1
+\end{itemize}
+
+Valores Faltantes
+\begin{itemize}
+	\item is.na()
+	\item 
+\end{itemize}
+
+Arreglos, matrices y listas
+\begin{itemize}
+	\item array(data=1:24,dim=c(2,4,3))
+\end{itemize}
+
+Variables Dummy
+
+Objetos Data.Frame: Arreglo rectangular donde las columnas pueden ser de diferentes clases
+
+Operador Pipe
