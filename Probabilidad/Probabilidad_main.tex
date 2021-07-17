@@ -1,0 +1,276 @@
+\section{PROBABILIDAD}
+\subsection{Conteo}
+Cuando dice probabilidad de que al menos 1, es mejor hacer 1- ninguno
+
+\textbf{Combinación}
+n es el total y r la selección. No importa el orden. Cuando dice se selecciona, escoge, saca, toma.
+
+\textbf{Permutación}
+n objetos ordenados de r. Si importa el orden. Cuando dice se formas de ordenar, organizar. Es mejor dibujar
+
+\textbf{Ley de la suma}
+
+\textbf{Ley de la multiplicación}
+
+\textbf{Armar grupos, arreglos}
+\subsubsection{Probabilidad}
+\begin{itemize}
+	\item Espacio muestral: Conjunto de todas las posibilidades de un experimento.
+	\item Regla general: $P(A)=\dfrac{\text{Casos favorables}}{\text{Casos totales}}$
+	\item $P(A)\geq0$
+	\item $0\leq P(A)\leq1$
+	\item Complemento $P(\overline{A})=1-P(A)$
+	\item Regla de la unión $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+	\item Dos eventos son independientes si $P(A\cap B)=P(A)P(B)$
+	\item Dos eventos son mutuamente excluyentes si $P(A\cap B)=0$
+\end{itemize}
+
+\subsubsection{Probabilidad Condicional}
+
+$P(A/B)=\dfrac{P(A\cap B)}{P(B)}$
+
+$P(A_1/B)=\dfrac{P(B/A_1)P(A)}{P(B/A_1)P(A_1)+P(B/A_2)P(A_2)+\dots+}$
+
+
+\begin{itemize}
+	\item Si dos eventos son independientes $P(A/B)=P(A)$ $P(B/A)=P(B)$
+\end{itemize}
+\subsection{Capítulo 3 - Variables aleatorias discretas}
+\subsubsection{Distribución de probabilidad}
+Sinónimos: Función de probabilidad, Función de densidad
+En general se debe llenar una tabla
+\begin{enumerate}
+	\item Identificar la variable aleatoria. Y: $\#$ de... cantidad de...
+	\item Identificar posibles valores de Y
+	\item Calcular la probabilidad para cada posible valor y llenar la tabla.
+	
+	\begin{tabular}{|c|c|c|}
+		Y & &\\
+		\hline
+		P(y) & &
+	\end{tabular}
+\end{enumerate}
+\subsubsection{Valor esperado}
+$E(y)=\sum yP(y)$
+
+\textbf{Propiedades}
+\begin{itemize}
+	\item $E(a)=a$
+	\item $E(ay)=aE(y)$
+	\item $E(x+y)=E(x)+E(y)$
+\end{itemize}
+
+\subsubsection{Varianza}
+$Var(y)=E(y^2)+E(y)^2$
+$E(y^2)=\sum y^2P(y)$
+
+\textbf{Propiedades}
+\begin{itemize}
+	\item $Var(a)=0$
+	\item $Var(ay)=a^2E(y)$
+	\item $Var(ay+b)=a^2E(y)$
+\end{itemize}
+\textbf{Desviación Estándar} =  $\sqrt{Varianza}$
+\subsubsection{Binomial}
+Se usa cuando dan n(Total) y p (probabilidad de éxito). $y:\#$ de intentos
+
+$P(y)=\binom{n}{y}p^y(1-p)^{n-y}\qquad y=0,1,\dots,n$
+
+$E(y)=np$
+
+$Var(y)=npq$
+\subsubsection{Geométrica}
+Se usa cuando dice primer éxito en en el intento y. y es el número de intentos.
+
+$P(y)=p(1-p)^{y-1}\qquad y=1,2,\dots$
+
+$E(y)=\dfrac{1}{p}$
+
+$Var(y)=\dfrac{1-p}{p^2}$
+\subsubsection{Binomial negativa}
+Se usa cuando dice el r-ésimo éxito en y intentos o en el intento y. y es el número de intentos, r es la cantidad de éxitos.
+
+$P(y)=\binom{y-1}{r-1}p^r(1-p)^{y-r}\qquad y=r,r+1,\dots$
+
+$E(y)=\dfrac{r}{p}$
+
+$Var(y)=\dfrac{r(1-p)}{p^2}$
+
+\subsubsection{Hipergeométrica}
+Se usa cuando dice sin reemplazo y se pueden encontrar las cantidades
+\begin{itemize}
+	\item N: Total
+	\item n: Lo que se selecciona
+	\item y: Lo que se quiere
+	\item r: el total de los que se quiere
+\end{itemize}
+$P(y)=\dfrac{\binom{r}{y}\binom{N-r}{n-y}}{\binom{N}{n}}\qquad y=0,1,\dots,n$
+
+$E(y)=\dfrac{nr}{N}$
+
+$Var(y)=\dfrac{nr}{N}\dfrac{N-r}{N}\dfrac{N-n}{N-1}$
+
+\subsubsection{Poisson}
+Se usa cuando dan el promedio o la media que es $\lambda$
+
+$P(y)=\dfrac{e^{-\lambda}\lambda^y}{y!}\qquad y=0,1,2,\dots$
+
+$E(y)=\lambda$
+
+$Var(y)=\lambda$
+
+\begin{itemize}
+	\item $\geq$ Al menos, mínimo, por lo menos.
+	\item $\leq$ a lo sumo, a lo mas, máximo.
+	\item $>$ más de, al menos de, mínimo .
+	\item $<$ máximo de, menos de.
+	\item $=$ Exactamente.
+\end{itemize}
+
+Tener en cuenta
+\begin{itemize}
+	\item $p(y\geq \#)=1-p(y<\#)$
+	\item $p(y> \#)=1-p(y\leq\#)$
+	\item $p(y\leq\#)=p(y=0)+p(y=1)+\dots+p(y=\#)$
+\end{itemize}
+
+\subsubsection{Función Generadora de Momentos}
+$m(t)=E(e^{ty})=\sum e^{ty}p(y)$
+
+\textbf{Momentos}
+\begin{itemize}
+	\item Momento 1: $E(y)=m'(t)|_{t=0}$
+	\item Momento 2: $E(y^2)=m''(t)|_{t=0}$
+\end{itemize}
+
+\subsubsection{Teorema de Tchebysheff}
+
+\begin{itemize}
+	\item $\mu$: Media
+	\item $\sigma$ : Desviación estándar
+	\item $k$: Constante
+\end{itemize}
+
+\textbf{Límite inferior}
+$P(|y-\mu|<k\sigma)\geq 1- 1/k^2$
+
+\textbf{Límite superior}
+$P(|y-\mu|\geq k\sigma)\leq 1/k^2$
+
+\subsection{Capítulo 4 - Variables aleatorias continuas}
+\textbf{Propiedades de la función de distribución}
+\begin{enumerate}
+	\item $F(-\infty)=0$
+	\item $F(\infty)=1$
+	\item $F(y) =p(Y\leq y)= \int_{min}^{y}f(t)dt$. Si hay varios trozos, se deben sumar los anteriores completos
+\end{enumerate}
+
+\textbf{Propiedades de la función de densidad de probabilidad}
+\begin{enumerate}
+	\item $\int_{min}^{max}f(y)dy=1$, sirve para encontrar constante, k o c
+	\item $f (y) \geq0$
+\end{enumerate}
+
+\textbf{Cálculo de probabilidades}
+\begin{enumerate}
+	\item $p(y<\#)=F(\#)$
+	\item $p(y>\#)=1-F(\#)$
+	\item $p(a<y<b)=F(b)-F(a)$
+\end{enumerate}
+
+\textbf{Valor esperado}
+
+$E(y)=\int_{min}^{max}yf(y)dy$
+
+\textbf{Varianza}
+
+$V(y)=E(y^2)-(E(y))^2$, $E(y^2)=\int_{min}^{max}y^2f(y)dy$
+
+\subsubsection{Distribución Uniforme}
+$f(y)=\dfrac{1}{\theta_2-\theta_1},\qquad \theta_1<y<\theta_2$
+
+$E(y)=\dfrac{\theta_1+\theta_2}{2}$
+
+$V(y)=\dfrac{(\theta_2-\theta_1)^2}{12}$
+
+$F(x)=\dfrac{x-a}{b-a},\qquad a<x<b$
+
+\subsubsection{Distribución Normal} 
+Estandarización: $z=\dfrac{y-\mu}{\sigma}$
+
+$E(y)=\mu$
+
+$V(y)=\sigma^2$
+
+\subsubsection{Distribución Gamma}
+$f(y)=\dfrac{1}{\Gamma(\alpha)\beta^\alpha}y^{\alpha-1}e^{-y/\beta}, \qquad 0<y<\infty, \qquad\Gamma(\alpha)=(\alpha-1)!$
+
+$E(y)=\alpha\beta$
+
+$V(y)=\alpha\beta^2$
+
+$f(x)=\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}$
+
+\subsubsection{Distribución Beta}
+$f(y)=\dfrac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}y^{\alpha-1}(1-y)^{\beta-1}, \qquad 0<y<1, \qquad\Gamma(\alpha)=(\alpha-1)!$
+
+$E(y)=\dfrac{\alpha}{\alpha+\beta}$
+
+$V(y)=\dfrac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$
+
+\subsubsection{Distribución Chi-Cuadrado}
+$f(y)=\dfrac{1}{2^{v/2}\Gamma(v/2)}y^{v/2-1}e^{-y/2},\qquad 0<y<\infty$, v son los GL
+
+$E(y)=v$
+
+$V(y)=2v$
+
+\subsubsection{Distribución Exponencial}
+$f(y)=\dfrac{1}{\beta}e^{-y/\beta},\qquad 0<y<\infty$
+
+$E(y)=\beta$
+
+$V(y)=\beta^2$
+
+$F(y)=1-e^{-\lambda y},\qquad \lambda=1/\beta$
+
+
+\subsection{Distribuciones Bivariadas}
+\subsubsection{Funciones discretas, tablas}
+
+\begin{itemize}
+	\item $p(x,y)$: Función de probabilidad conjunta
+	\item $E(x)=\sum xp(x)$
+	\item $E(y)=\sum yp(y)$
+	\item $E(xy)=\sum xyp(x,y)$
+	\item $V(x+y)=V(x)+V(y)-2Cov(x,y)$
+	\item $Cov(x,y)=E(xy)-E(x)E(y)$ 
+	\item X y Y son independiente si $p(x,y) = p(x)p(y)$
+	\item $g_{x/y_i}=\dfrac{g_{xy}(x,y)}{g_y(y_i)}$
+\end{itemize}
+0
+\subsubsection{Funciones Continuas}
+
+\begin{itemize}
+	\item $f_{xy}(x,y)$: Función de densidad conjunta
+	\item $F(x,y)$: Función de distribución conjunta
+	\item $\int \int f(x,y)dydx=1$ , sirve para encontrar k
+	\item Marginal de x $f_x(x)=\int f_{xy}(x,y)dy$
+	\item Marginal de y $f_y(y)=\int f_{xy}(x,y)dx$
+	\item Valor esperado $E(algo)=\int \int algof_{xy}(x,y)dydx$
+	\item $V(x+y)=V(x)+V(y)-2Cov(x,y)$
+	\item $Cov(x,y)=E(xy)-E(x)E(y)$
+	\item Correlación $\rho=\dfrac{Cov(x,y)}{\sigma_x\sigma_y}$.
+	\item Si X y Y son independientes $Cov(x,y)=0$
+	\item X y Y son independiente si $F_{xy}(x,y) = F_x(x)F_y(y)$
+	\item X y Y son independiente si $f_{xy}(x,y) = f_x(x)f_y(y)$
+	
+\end{itemize}
+
+\subsubsection{Cuando hay = en la probabilidad condicional}
+\begin{enumerate}
+	\item Encontrar $f(x/y)=\dfrac{f(x,y)}{f(y)}$ o $f(y/x)=\dfrac{f(x,y)}{f(x)}$
+	\item Reemplazar lo que tiene el igual
+	\item Dibujar región
+	\item Integrar la función del paso 2 con la variable que queda.
+\end{enumerate}

@@ -1,0 +1,291 @@
+\section{CÁLCULO 3}
+
+\subsection{Funciones}
+\begin{itemize}
+	\item Escalares: Al reemplazar dan un número
+	\item Vectoriales: Al reemplazar dan un vector
+\end{itemize}
+
+\subsection{Representación geométrica}
+
+\subsubsection{Curvas de nivel}
+\begin{enumerate}
+	\item Cambiar z por k
+	\item Despejar y (pero si hay $x^2+y^2$, despejar eso porque es un círculo)
+	\item Darle valores a k, al menos 3
+	\item Graficar para cada valor de k
+	\item Graficar en 3D, para saber corte con z, reemplazar x y y por 0
+\end{enumerate}
+
+\subsubsection{Gráficas importantes}
+\begin{itemize}
+	\item Esfera: $x^2+y^2+z^2=\rho^2$, radio=$\rho$
+	\item Cilindro:  $x^2+y^2=r^2$, la letra que no aparece es hacia donde abre
+	\item Cono: $ z=\sqrt{x^2+y^2}$, la letra que no está en la raiz es hacia donde abre.
+	\item Paraboloide: $ z=x^2+y^2$, el que no tiene el cuadrado es hacia donde abre.
+	\item Elipsoide: $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1$, a, b y c son los puntos donde corta en x, y y z respectivamente.
+\end{itemize}
+\subsection{Derivadas Parciales}
+\begin{itemize}
+	\item Primeras derivadas: $f'_x=\dfrac{\delta f}{\delta x}$ $f'_y=\dfrac{\delta f}{\delta y}$
+	\item Segundas derivadas: $f''_{xx}=\dfrac{\delta^2 f}{\delta x^2}$, $f''_{yy}=\dfrac{\delta^2 f}{\delta y^2}$, $f''_{xy}=\dfrac{\delta^2 f}{\delta x\delta y}$, $f''_{yx}=\dfrac{\delta^2 f}{\delta y\delta x}$
+	\item Las cruzadas son iguales por el teorema de Young
+\end{itemize}
+\subsection{Ecuación plano tangente}
+
+\begin{itemize}
+	\item Si la función es de dos variables
+	$$f'_x(x_0,y_0)(x-x_0)+f'_y(x_0,y_0)(y-y_0)=z-z_0$$
+	\item Si la función es de 3 variables
+	$$f'_x(x_0,y_0)(x-x_0)+f'_y(x_0,y_0)(y-y_0)+f'_z(x_0,y_0)(z-z_0)=0$$	
+\end{itemize}
+
+\textbf{Pasos}
+
+\begin{enumerate}
+	\item Encontrar las primeras derivadas.
+	\item Reemplazar el punto en las derivadas.
+	\item Reemplazar en ecuación del plano.
+\end{enumerate}
+
+\subsection{Formas cuadráticas}
+\begin{enumerate}
+	\item Encontrar las primeras derivadas
+	\item Encontrar las segundas derivadas
+	\item Matriz Hessiana o matriz simétrica
+	
+	H=$\begin{pmatrix}
+	f''_{xx} & f''_{xy} \\
+	f''_{xy} & f''_{yy} \\
+	\end{pmatrix}$
+	
+	H=$\begin{pmatrix}
+	f''_{xx} & f''_{xy} & f''_{xz} \\
+	f''_{xy} & f''_{yy} & f''_{yz}\\
+	f''_{xz} & f''_{yz} & f''_{zz}\\
+	\end{pmatrix}$
+	\item Conclusión
+	\begin{itemize}
+		\item Si los dominantes son todos positivos, es definida positiva
+		\item Si los dominantes son de signos alternados empezando con -, es difinida negativa.
+		\item Si los dominantes son $\geq 0$ (Puede ser cero), es semidefinda positiva.
+		\item Si los dominantes son $\leq 0$ (Puede ser cero), es semidefinida negativa.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Regla de la cadena}
+Si F(u,v) y u(x,y) v(x,y)
+\begin{itemize}
+	\item $f'_x=F'_uu'_x+F'_vv'_x$
+	\item $f'_y=F'_uu'_y+F'_vv'_y$
+\end{itemize}
+
+\subsection{Derivación implícita}
+Se usa cuando no dan z despejada
+
+\begin{enumerate}
+	\item Igualar a cero y llamar a eso F
+	\item Derivar F con respecto a todas las letras $f'_x \qquad f'_y \qquad f'_z$
+	\item Encontrar lo que pidan, ejemplo $z'_x=-\dfrac{f'_x}{f'_z}$
+\end{enumerate}
+
+\subsection{Derivada Direccional}
+
+$$\overrightarrow{D}_f=f'_x(x_0,y_0)h+f'_y(x_0,y_0)k$$
+$$\overrightarrow{D}_f=\nabla f \cdot V$$
+
+Derivada direccional de f en al punto $(x_0,y_0)$ en la dirección del vector unitario (h,k).
+
+\subsection{Elasticidades}
+
+Elasticidad de z con respecto a x $el_xZ=\dfrac{x}{z}z'_x$
+
+\textbf{Tasa marginal de sustitución}
+
+$R_{yx}=\dfrac{f'x}{f'y}$ y $R_{xy}=\dfrac{f'y}{f'x}$
+
+\textbf{Elasticidad de sustitución $\sigma_{yx}$}
+
+$\sigma_{yx}=el_{R_{yx}}(\dfrac{y}{x})=\dfrac{R_{yx}}{\dfrac{y}{x}}(\dfrac{y}{x})'_R$
+
+$\sigma_{xy}=el_{R_{xy}}(\dfrac{x}{y})=\dfrac{R_{xy}}{\dfrac{x}{y}}(\dfrac{x}{y})'_R$
+
+\textbf{Pasos para $\sigma_{yx}$ o $\sigma_{xy}$}
+
+\begin{enumerate}
+	\item Derivar
+	\item Encontrar $R_{yx}$ o $R_{xy}$
+	\item Despejar $\dfrac{y}{x}$ o $\dfrac{x}{y}$
+	\item Derivar $\dfrac{y}{x}$ o $\dfrac{x}{y}$ respecto a R
+	\item Reemplazar en la formula cambiando todo menos R. Debe dar un número
+\end{enumerate}
+
+\subsection{Funciones Homogeneas}
+Una función es homogenea si $f(tx,ty)=t^nf(x,y)$, homogenea de grado n
+\begin{enumerate}
+	\item Cambiar x por tx y y por ty
+	\item Romper paréntesis
+	\item Sacar factor común t
+	\item Si se llega a $t^nf(x,y)$ es homogenea.
+\end{enumerate}
+
+\textbf{Teorema de Euler}
+
+Si $xf'_x+yf'_y=kf(x,y)$ homogénea de grado k.
+
+\subsection{Aproximaciones lineales}
+
+$f(x,y)=f(a,b)+f'_x(a,b)(x-a)+f'_y(a,b)(y-b)$, son los mismos pasos del plano
+
+\subsection{Sistemas de ecuaciones}
+
+\begin{enumerate}
+	\item Derivar respecto a todo y cada vez que se deriva una letra se pone dletra.
+	\item Pasar todo lo que tiene du y dv al lado izquierdo y pasar todo lo que tiene dx y dy al lado derecho
+	\item Organizar en una matriz
+	\item Calcular det(A)
+	\item Encontrar lo que piden usando cramer
+\end{enumerate}
+
+\subsection{Integrales dobles}
+
+\subsubsection{Cambio de orden de integración, cuando la integral es difícil}
+
+$$\underbrace{\int\overbrace{\int f(x,y)dy}^{funciones}dx}_{Numeros}$$
+
+Pasos
+
+\begin{enumerate}
+	\item Dibujar región, sacar ecuación de cada límite de integración.
+	\item Cambiar orden y límites de integración. $\int\int f(x,y)dydx$
+	\item Integrar, puede ser sustitución o partes.
+\end{enumerate}
+
+\subsection{Cambio de variable}
+
+\begin{enumerate}
+	\item Encontrar el Jacobiano
+	\begin{itemize}
+		\item Si x y y dependen de u y v
+		$$
+		J=\left|\begin{tabular}{ccc}
+		$\dfrac{dx}{du}$ & $\dfrac{dx}{dv}$ \\
+		$\dfrac{dy}{du}$ & $\dfrac{dy}{dv}$
+		\end{tabular}\right|
+		$$
+		\item Si u y v dependen de x y y
+		$$
+		J=\dfrac{1}{\left|\begin{tabular}{ccc}
+			$\dfrac{du}{dx}$ & $\dfrac{du}{dy}$ \\
+			$\dfrac{dv}{dx}$ & $\dfrac{dv}{dy}$
+			\end{tabular}\right|}
+		$$
+	\end{itemize}
+	\item Encontrar ecuaciones para u y v (Despejar si dan x y y en términos de u y v)
+	\item Graficar en los plano xy y uv
+	\item $\int\int f(u,v)|J|dudv$, el Jacobiano es positivo 
+	
+\end{enumerate}
+
+
+
+\subsection{Máximos y mínimos sin región}
+\begin{enumerate}
+	\item Encontrar derivadas parciales con respecto a x y y, $f'_{x}$ y $f'_{y}$.
+	\item Igualar a cero y despejar las variables, esos son los puntos críticos o estacionarios.
+	\item Encontrar las segundas derivadas $f''_{xx}$, $f''_{yy}$ y $f''_{xy}$
+	\item Encontrar $\triangle$
+	
+	H=$\begin{pmatrix}
+	f''_{xx} & f''_{xy} \\
+	f''_{xy} & f''_{yy} \\
+	\end{pmatrix}$
+	
+	$\triangle=\det H$ o $\triangle = f''_{xx}f''_{yy}-(f''_{xy})^2$
+	\item Conclusión 
+	\begin{itemize}
+		\item Si $f''_{xx}>0$ y $\triangle>0$ es un mínimo
+		\item Si $f''_{xx}<0$ y $\triangle>0$ es un máximo
+		\item Si $\triangle<0$ es un punto de silla
+	\end{itemize}
+\end{enumerate}
+
+Ej: $f(x,y)=x^3+y^3-9xy+27$ en (0,0) (0,1) (1,1)
+
+\subsection{Máximos y mínimos con región}
+
+\begin{enumerate}
+	\item Encontrar derivadas parciales con respecto a x y y, $f'_{x}$ y $f'_{y}$.
+	\item Igualar a cero y despejar las variables, esos son los puntos críticos o estacionarios.
+	\item Encontrar las segundas derivadas $f''_{xx}$, $f''_{yy}$ y $f''_{xy}$
+	\item Dibujar región
+	\item Nombrar los bordes de la región.
+	\item Calcular para cada borde una función, reemplazando el borde en la original.
+	\item Derivar e igualar a cero cada función y encontrar puntos
+	\item Escoger puntos que están en la región y las esquinas (En un círculo las esquinas son los cortes con el eje x).
+	\item Reemplazar todos los puntos en la original.
+	\item Verificar cual es el máx y cual es el mín absoluto. 
+\end{enumerate}
+
+\subsection{Cóncava y convexa}
+\subsubsection{Método 1: Hessiana}
+\begin{enumerate}
+	\item Primeras derivadas
+	\item Segundas derivadas
+	\item Concluir
+	\begin{itemize}
+		\item Si $f''_{xx}\geq0$ y $f''_{yy}\geq0$ y $\det(H)\geq0$ es un convexa
+		\item Si $f''_{xx}\leq0$ y $f''_{yy}\leq0$ y $\det(H)\geq0$ es un concava
+		\item Si $f''_{xx}>0$ y $f''_{yy}>0$ es estrictamente convexa
+		\item Si $f''_{xx}<0$ y $f''_{yy}<0$ es estrictamente cóncava
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Método 1: Propiedades}
+\begin{enumerate}
+	\item Lineal, cóncava o convexa a conveniencia.
+	\item Potencias pares $x^2,\ y^4$, convexa
+	\item Potencias impares $x^3,\ y^5$, convexa si $x>0$ y cóncava si $x<0$
+	\item Raíces pares $\sqrt[2]{x},\ \sqrt[4]{x}$
+	\item $e^{algo}$ convexo si algo es convexo
+	\item $ln(algo)$ cóncavo si algo es cóncavo
+	\item Suma de cóncavas es cóncava.
+	\item Suma de convexas es convexa.
+	\item Compuesta de convexas es convexa.
+	\item Compuesta de cóncavas es cóncava.
+	\item -convexa es cóncava
+	\item -cóncava es convexa
+	\item Cobb-Douglas $x^ay^b$ si $a+b\leq1$ es concava. Si $a+b<1$ es estrictamente cóncava
+	\item Si es concava es cuasiconcava
+	\item Si es convexa es cuasiconvexa	
+\end{enumerate}
+
+Ej: Diga si es cóncava o convexa $3x^{1/4}y^{1/2}z^{1/8}-e^{x^2+y^2+z}+ln(x^2y^3\sqrt{z})$
+
+\subsection{Lagrange}
+
+Si preguntan condiciones necesarias y suficientes. Las condiciones necesarias son las primeras derivadas $\mathcal{L}_x$, $\mathcal{L}_y$ y $\mathcal{L}_\lambda$ y las condiciones suficientes es que es que el punto que se encuentre sea máximo o mínimo de acuerdo a lo que se está pidiendo.
+
+\begin{enumerate}
+	\item Plantear Lagrangiano, $\mathcal{L}=funcion - \lambda(restriccion)$. La restricción debe estar igualada a cero.
+	\item Encontrar $\mathcal{L}_x$, $\mathcal{L}_y$ y $\mathcal{L}_\lambda$
+	\item Igualar a cero todas las derivadas y despejar $\lambda$ de cada una.
+	\item Igualar los $\lambda$ y encontrar alguna variable.
+	\item Reemplazar esa variable en la restricción y encontrar todas las variables.
+	\item Verificar que cumple.
+	\begin{itemize}
+		 \item Método 1: Si la función es concava es un máximo. Si la función es convexa es un mínimo.
+		 \item Método 2: Hessiano ampliado (orlado)
+		 
+		 $$H=\begin{pmatrix}
+		 0 & g'_x & g'_y \\
+		 g'_x & \mathcal{L}''_{xx} & \mathcal{L}''_{xy} \\
+		 g'_y & \mathcal{L}''_{xy} & \mathcal{L}''_{yy} \\
+		 \end{pmatrix}$$
+		 Reemplazar para cada punto y si da positivo es máximo, si da negativo es mínimo. g es la restricción.
+		 \item Método 3: si $\mathcal{L}$ es concava es un máximo, si es convexa es un mínimo.
+		 \item Método 4: Inventarse un punto que cumpla la restricción y evaluar todos los puntos en la original, comparar con el inventado para saber cual es mayor y cual es menor.
+		 
+	\end{itemize}
+	\item si hay 2 restricciones  $\mathcal{L}=funcion - \lambda_1(restriccion1)-\lambda_2(restriccion2)$ y seguir los mismos pasos.
+\end{enumerate}

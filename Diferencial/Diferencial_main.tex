@@ -1,0 +1,296 @@
+\section{DIFERENCIAL}
+
+\subsection{Dominio}
+
+\subsection{Función Inversa}
+
+\subsection{Límites laterales}
+
+\subsection{Límites}
+
+\subsection{Continuidad}
+
+\subsection{Definición de derivada}
+
+\begin{align*}
+	\lim\limits_{h \to 0}& \dfrac{f(x+h)-f(x)}{h}\\
+	\lim\limits_{x \to a}& \dfrac{f(x)-f(a)}{x-a}
+\end{align*}
+
+\subsection{Propiedades de derivadas}
+\begin{itemize}
+	\item $(f\pm g)'=f'\pm g'$
+	\item $(f\cdot g)'=f'g+fg'$
+	\item $(f/g)'=\dfrac{f'g-fg'}{g^2}$
+	\item $f(g(x))'=f'(g(x))g'(x)$
+\end{itemize}
+
+\subsection{Lista de derivadas}
+\begin{table}[H]
+	\centering
+
+\begin{tabular}{ll}
+	\hline \hline
+	Función & Integral\\
+	\hline
+	$\#$ & $0$\\
+	$\#x$ & $\#$\\
+	$x$ & $1$\\
+	$x^n$ & $(n+1)x^{n-1}$\\
+	$\ln(x)$ & $\dfrac{1}{x}$\\
+	$\ln(x)$ & $\dfrac{1}{x}$\\
+	$e^x$ & $e^x$\\
+	$\#^x$ & $\#^x\ln(\#)$\\
+	$sin(x)$ & $cos(x)$\\
+	$cos(x)$ & $-sen(x)$\\
+	$tan(x)$ & $sec^2(x)$\\
+	$tan(x)$ & $sec(x)tan(x)$\\
+	$cot(x)$ & $-csc^2(x)$\\
+	$csc(x)$ & $-csc(x)cot(x)$\\
+	$arctan(x)$ & $\dfrac{1}{1+x^2}$\\
+	$arcsen(x)$ & $\dfrac{1}{\sqrt{1-x^2}}$\\
+	$arcsec(x)$ & $\dfrac{1}{x\sqrt{x^2-1}}$\\
+	\hline
+\end{tabular}
+
+\end{table}
+
+
+\subsection{Regla de la cadena}
+
+\subsection{Derivación implícita}
+
+\subsection{Derivación Logarítmica}
+
+\subsection{Máximos y mínimos}
+
+\subsection{Ejercicios claves segundo Parcial}
+
+
+\begin{itemize}
+	\item Si piden ecuación de recta tangente y dan un punto (x,y).
+	\begin{itemize}
+		\item Si al reemplazar el x en la función da el y del punto
+		\begin{enumerate}
+			\item Derivar
+			\item Reemplazar el punto. Lo que da es m
+			\item Encontrar la ecuación de la recta.
+		\end{enumerate}
+	\item Si al reemplazar el x en la función no da el y del punto, es decir, el punto no está en la función.
+	\begin{enumerate}
+		\item Elegir un punto imaginario en la función, (a,f(a)). Para encontrar f(a), reemplazar a en la original.
+		\item Encontrar $m=\dfrac{y_2-y_1}{x_2-x_1}$ con el punto que dan y el punto imaginario
+		\item Encontrar $f'(a)$, es decir derivar y reemplazar a.
+		\item Hacer $f'(a)=m$ y despejar a.
+		\item Con los valores de a, reemplazar en la derivada para encontrar pendientes
+		\item Encontrar ecuaciones de rectas.
+	\end{enumerate}
+	\end{itemize}
+	
+	\subsection{Teorema del valor medio}
+	\begin{itemize}
+		\item Si f es una función continua en [a,b] y
+		\item f' es derivable en (a,b), es decir que la derivada es continua en (a,b)
+		\item existe un valor c tal que $f'(c)=\dfrac{f(b)-f(a)}{b-a}$
+	\end{itemize}
+	\subsection{Teorema de Rolle}
+	\begin{itemize}
+		\item Si f es una función continua en [a,b] y
+		\item f' es derivable en (a,b), es decir que la derivada es continua en (a,b)
+		\item $f(a)=f(b)$
+		\item existe un valor c tal que $f'(c)=0$
+	\end{itemize}
+	\subsection{Raíces en un intervalo}
+	\begin{itemize}
+		\item Encontrar 2 números para los cuales al reemplazar en la función uno da negativo y otro positivo. 
+		\item Verificar si la función es continua [a,b].
+		\item Por el teorema del valor intermedio se garantiza la existencia de al menos una raiz o un cruce por el eje x en el intervalo (a,b).
+		\item Verificar si la función es derivable en (a,b).
+		\item Encontrar la derivada. Si no hay puntos críticos, entonces la derivada es siempre positiva o siempre negativa por lo que solo hay una raíz en (a,b).
+	\end{itemize}
+\end{itemize}
+
+\subsection{Trazo de curvas}
+\begin{enumerate}
+	\item Dominio
+	\item Cortes con ejes
+	\item Simetría
+	\item Asíntotas
+	\begin{itemize}
+		\item Verticales
+		\item Horizontales
+		\item Oblicuas: Son de la forma y=mx+b
+		$m=\lim\limits_{x \to \infty}\frac{f(x)}{x}$ y $b=\lim\limits_{x \to \infty}f(x)-mx$
+	\end{itemize}
+	\item Intervalos de crecimiento y decrecimiento
+	\item Máximos y mínimos
+	\item Concavidad
+	\item Bosquejo
+	\item Rango
+\end{enumerate}
+
+\subsection{Tasas de Cambio}
+
+\subsection{Optimización}
+
+\begin{enumerate}
+	\item Anotar datos y hacer dibujo, identificar restricción (valor o ecuación que dan).
+	\item Encontrar función objetivo, es lo que se quiere maximizar o minimizar.
+	\item Encontrar ecuación de restricción.
+	\item Despejar una letra de la restricción y reemplazar en la función objetivo.
+	\item Derivar, igualar a cero y despejar.
+	\item Comprobar los puntos encontrados con cementerio o reemplazando en le segunda derivada.
+	\item Encontrar lo que piden.
+\end{enumerate}
+
+\subsection{L'Hopital}
+
+\begin{tabular}{@{}|p{2cm}| @{}|p{2cm}| @{}|p{2.5cm}| @{}|p{4cm}|}
+	\hline \hline
+	$\dfrac{0}{0},\ \dfrac{\infty}{\infty}$  & $0\cdot \infty$  & $\infty-\infty$ & $1^\infty,\ \infty^0,\ 0^0$ \\
+	\hline
+	Derivar arriba y abajo & Bajar una función, no bajar LN  & Si son fracciones sumar, si son raices racionalizar, si son logaritmos $ln(a)-ln(b)=ln(\dfrac{a}{b})$ & \begin{itemize}
+		\item Poner $y=lim$
+		\item sacar ln a ambos lados $ln(y)=lim ln()$
+		\item Bajar exponente
+		\item Aplicar algún l'hopital
+		\item Respuesta final, poner $y=e^{rta}$
+		\end{itemize}
+	\\
+	\hline
+\end{tabular}
+
+\subsection{Área entre curvas}
+
+\begin{enumerate}
+	\item Igualar ecuaciones y resolver para encontrar puntos de corte (x,y)
+	\item Graficar (Transformaciones o tabular)
+	\item Plantear la integral
+	\item $A=\int(\text{función mayor - función menor})$
+\end{enumerate}
+
+\subsection{Sólidos de Revolución}
+
+\begin{enumerate}
+	\item Igualar ecuaciones y resolver para encontrar puntos de corte (x,y)
+	\item Graficar solo la región
+	\item Pintar eje de rotación y dibujar espejo
+	\item Encontrar volumen
+	\item Arandelas $V=\pi\int_{a}^{b}(R)^2-(r)^2$
+	\begin{itemize}
+		\item Pintar arandelas, radio mayor y radio menor.
+		\item Si gira en eje vertical
+		\begin{itemize}
+			\item El diferencial es dy
+			\item a y b se ven en y
+			\item los radios se calculan como eje -función (función en términos de y, se despeja x)
+			\begin{itemize}
+				\item eje -función, si eje está por derecha
+				\item función - eje, si eje está por izquierda
+			\end{itemize}
+		\end{itemize}
+		\item Si gira en eje horizontal
+		\begin{itemize}
+			\item El diferencial es dx
+			\item a y b se ven en x
+			\item los radios se calculan como (función en términos de x, se despeja y)
+			\begin{itemize}
+				\item eje -función, si eje está por arriba
+				\item función - eje, si eje está por abajo
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\item Casquetes cilíndricos $V=2\pi\int_{a}^{b}(\text{H})(radio)$
+	\begin{itemize}
+		\item Pintar cilindro, radio y altura.
+		\item Si gira en eje vertical
+		\begin{itemize}
+			\item Se pone dx
+			\item a y b se ven en x
+			\item H=Techo - piso
+			\item el radio se calcula como:
+			\begin{itemize}
+				\item eje -x, si eje está por derecha
+				\item x - eje, si gráfica está por izquierda
+			\end{itemize}
+		\end{itemize}
+		\item Si gira en eje horizontal
+		\begin{itemize}
+			\item Se pone dyg
+			\item a y b se ven en y
+			\item H=Derecha - izquierda
+			\item los radio se calculan como:
+			\begin{itemize}
+				\item eje -y, si eje está por arriba
+				\item y - eje, si eje está por abajo
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Interés compuesto}
+\subsubsection{Tasas efectivas}
+$$A=P(1+i)^n$$
+\begin{itemize}
+	\item A: Capital, valor futuro, ahorro
+	\item P: Inversión inicial
+	\item n: Número de periodos
+	\item i: Tasa de interés
+\end{itemize}
+
+\subsubsection{Tasas nominales, capitalizables, convertibles}
+$$A=P(1+i/n)^{nt}$$
+\begin{itemize}
+	\item A: Capital, valor futuro, ahorro
+	\item P: Inversión inicial
+	\item n: Número de periodos
+	\item i: Tasa de interés
+\end{itemize}
+
+\subsubsection{Interés continuo}
+$$A=Pe^{it}$$
+\begin{itemize}
+	\item A: Capital, valor futuro, ahorro
+	\item P: Inversión inicial
+	\item i: Tasa de interés
+\end{itemize}
+
+\subsection{Crecimiento logístico}
+$$f(t)=\dfrac{L}{Ab^{-t}}$$
+\begin{itemize}
+	\item L: Límite
+\end{itemize}
+
+\subsection{Curva de aprendizaje}
+$$f(t)=L-Ab^{-t}$$
+\begin{itemize}
+	\item L: Límite
+\end{itemize}
+
+\subsection{Modelos log y exp}
+$$f(t)=ab^{t}$$
+\begin{itemize}
+	\item a: Valor para t=0
+\end{itemize}
+
+$$f(t)=\log_ax$$
+\begin{itemize}
+	\item a: Valor de x cuando la gráfica vale 1
+\end{itemize}
+
+\subsection{Elasticidad}
+$$e=\dfrac{-p}{q}q'$$
+\begin{itemize}
+	\item $|e|>1$ Elástica
+	\item $|e|<1$ Inelástica
+	\item $|e|>1$ Perfectamente elástica
+	\item Para un incremento del $1\%$ del precio la demanda disminuye en ...
+\end{itemize}
+
+\subsection{Bienes sustitutos y complementarios}
+
+\begin{itemize}
+	\item Si las derivadas parciales cruzadas con positivas los bienes son sustitutos
+	\item Si las derivadas parciales cruzadas con negativas los bienes son complementarios
+\end{itemize}
+

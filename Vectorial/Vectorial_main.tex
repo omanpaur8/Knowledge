@@ -1,0 +1,366 @@
+\section{VECTORIAL}
+
+\subsection{Rectas}
+
+$l(t)=a+\overrightarrow{v}t$
+\subsection{Producto punto}
+$\overrightarrow{u}\cdot\overrightarrow{v}=|\overrightarrow{u}||\overrightarrow{v}|cos(\theta)$
+
+\subsection{Producto cruz}
+$\overrightarrow{u}\times\overrightarrow{v}=|\overrightarrow{u}||\overrightarrow{v}|sen(\theta)$
+
+La regla de la mano derecha indica la dirección del vector resultante del producto cruz.
+
+\subsection{Proyectar una recta en un plano}
+\begin{enumerate}
+	\item Encontrar punto de intersección $p$
+	\item Encontrar proyección de la recta sobre el vector normal $\overrightarrow{V_n}$
+	\item Encontrar vector de proyección en el plano $\overrightarrow{V_H}=\overrightarrow{d}-\overrightarrow{V_n}$
+	\item Armar ecuación de recta con punto $p$ y vector $\overrightarrow{V_H}$
+\end{enumerate}
+\subsection{Coordenadas cilíndricas}
+
+$(r, \theta, z)$
+
+\begin{itemize}
+	\item $r=a$, cilindro
+	\item $\theta=a$, plano
+	\item $z=a$, plano horizontal
+\end{itemize}
+
+\subsubsection{Rectangulares a cilíndricas}
+\begin{itemize}
+	\item $r=\sqrt{x^2+y^2}$
+	\item $\theta=arctan(\dfrac{y}{x})$
+	\item $z=z$
+\end{itemize}
+
+\subsubsection{Cilíndricas a rectangulares}
+\begin{itemize}
+	\item $x=rcos(\theta)$
+	\item $y=rsen(\theta)$
+	\item $z=z$
+\end{itemize}
+
+\subsection{Coordenadas esféricas}
+$(\rho, \phi,\theta)$
+
+\begin{itemize}
+	\item $\rho=a$, espera
+	\item $\phi=a$, cono
+	\item $\theta=a$, semiplano
+\end{itemize}
+
+\subsubsection{Rectangulares a esféricas}
+\begin{itemize}
+	\item $\rho=\sqrt{x^2+y^2+z^2}$
+	\item $\phi=cos^{-1}(\dfrac{z}{\rho})$
+	\item $\theta=tan^{-1}(\dfrac{y}{x})$
+\end{itemize}
+
+\subsubsection{Esféricas a rectangulares}
+\begin{itemize}
+	\item $x=\rho sin(\phi) cos(\theta)$
+	\item $y=\rho sin(\phi) sin(\theta)$
+	\item $z=\rho cos(\phi)$
+\end{itemize}
+
+\subsubsection{Cilíndricas a esféricas}
+\begin{itemize}
+	\item $\rho=\sqrt{r^2+z^2}$
+	\item $\phi=sen^{-1}(\dfrac{r}{\rho})$
+%	\item $\theta=tan^{-1}(\dfrac{y}{x})$
+\end{itemize}
+
+
+\subsection{Funciones}
+\begin{itemize}
+	\item Escalares: Al reemplazar dan un número
+	\item Vectoriales: Al reemplazar dan un vector
+\end{itemize}
+
+\subsection{Representación geométrica}
+
+\subsubsection{Curvas}
+
+\begin{enumerate}
+	\item Cambiar z o f(x,y) por k
+	\item Despejar y (pero si hay $x^2+y^2$, despejar eso porque es un círculo)
+	\item Darle valores a k, al menos 3
+	\item Graficar para cada valor de k
+	\item Graficar en 3D, para saber corte con z, reemplazar x y y por 0
+\end{enumerate}
+
+\subsubsection{Superficies de nivel}
+
+\begin{enumerate}
+	\item Cambiar f(x,y,z) por k
+	\item Darle valores a k en distintos rangos para ver que superficies se forman.
+	\item Graficar para cada valor de k
+	\item Indicar que tipo de superficies se forman
+\end{enumerate}
+
+\subsubsection{Gráficas importantes}
+\begin{itemize}
+	\item Esfera: $x^2+y^2+z^2=\rho^2$, radio=$\rho$
+	\item Cilindro:  $x^2+y^2=r^2$, la letra que no aparece es hacia donde abre
+	\item Cono: $ z=\sqrt{x^2+y^2}$, la letra que no está en la raiz es hacia donde abre.
+	\item Paraboloide: $ z=x^2+y^2$, el que no tiene el cuadrado es hacia donde abre.
+	\item Elipsoide: $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1$, a, b y c son los puntos donde corta en x, y y z respectivamente.
+	\item Paraboloide hiperbólico o silla de montar: $ z=x^2-y^2$, el que no tiene el cuadrado es hacia donde abre.
+\end{itemize}
+
+\subsection{Límites y continuidad}
+$\lim\limits_{(x,y) \to (x_0,y_0)}f(x,y)$
+
+\begin{itemize}
+	\item Los polinomios son continuos
+	\item Utilizar varios acercamientos tratando de que de diferente por 2
+	\item En caso de que el límite exista se debe mostrar por emparedado
+\end{itemize}
+
+\subsection{Derivadas Parciales}
+\begin{itemize}
+	\item Primeras derivadas: $f'_x=\dfrac{\delta f}{\delta x}$ $f'_y=\dfrac{\delta f}{\delta y}$
+	\item Segundas derivadas: $f''_{xx}=\dfrac{\delta^2 f}{\delta x^2}$, $f''_{yy}=\dfrac{\delta^2 f}{\delta y^2}$, $f''_{xy}=\dfrac{\delta^2 f}{\delta x\delta y}$, $f''_{yx}=\dfrac{\delta^2 f}{\delta y\delta x}$
+	\item Una función cuyas primeras derivadas parciales existan y sean continuas, se dice que es de clase $C^1$. Si una función es $C^1$ es diferenciable. Si estas derivadas a su vez tienen derivadas parciales continuas se die que F es de clase $C^2$ o que es 2 veces continuamente diferenciable y así sucesivamente.
+	\item Si una función es clase $C^2$ entonces las derivadas parciales mixtas o cruzadas con iguales.
+	\item $Df(x_0,y_0)$ es el vector o matriz de derivadas parciales (pag 125).
+\end{itemize}
+
+\subsubsection{Ecuación recta tangente}
+
+\begin{itemize}
+	\item Recta tangente a la intersección de dos superficies
+	\begin{enumerate}
+		\item Calcular el gradiente a las 2 superficies y reemplazar el punto dado
+		\item Hacer producto cruz entre estos vectores y ese vector es el vector director de la recta.
+		\item Armar la ecuación de la recta
+	\end{enumerate}
+\end{itemize}
+
+
+\subsubsection{Ecuación plano tangente}
+
+\begin{itemize}
+	\item Si la función es de dos variables
+	$$f'_x(x_0,y_0)(x-x_0)+f'_y(x_0,y_0)(y-y_0)=z-z_0$$
+	\item Si la función es de 3 variables
+	$$f'_x(x_0,y_0)(x-x_0)+f'_y(x_0,y_0)(y-y_0)+f'_z(x_0,y_0)(z-z_0)=0$$
+	$$\nabla f(x_0,y_0,z_0)\cdot(x-x_0,y-y_0,z-z_0)=0$$	
+\end{itemize}
+
+
+
+
+\textbf{Pasos}
+
+\begin{enumerate}
+	\item Encontrar las primeras derivadas.
+	\item Reemplazar el punto en las derivadas.
+	\item Reemplazar en ecuación del plano.
+\end{enumerate}
+
+\subsubsection{Derivada Direccional}
+
+$$\overrightarrow{D}_f=f'_x(x_0,y_0)h+f'_y(x_0,y_0)k$$
+$$\overrightarrow{D}_f=\nabla f \cdot \overrightarrow{v}$$
+
+Derivada direccional de f en al punto $(x_0,y_0)$ en la dirección del vector unitario (h,k).
+
+\subsubsection{Regla de la cadena}
+Si F(u,v) y u(x,y) v(x,y)
+\begin{itemize}
+	\item $f'_x=F'_uu'_x+F'_vv'_x$
+	\item $f'_y=F'_uu'_y+F'_vv'_y$
+\end{itemize}
+
+Si h(t)=f(u,v,w) y (u(t), v(t) , w(t))
+\begin{itemize}
+	\item $\dfrac{dh}{dt}=\dfrac{\delta h}{\delta u}\dfrac{du}{dt}+\dfrac{\delta h}{\delta v}\dfrac{dv}{dt}+\dfrac{\delta h}{\delta w}\dfrac{dw}{dt}$
+\end{itemize}
+
+Si h(x,y,z)=f(u,v,w) y (u(x,y,z), v(x,y,z) , w(x,y,z))
+\begin{itemize}
+	\item $\dfrac{\partial h}{\partial x}=\dfrac{\partial h}{\partial u}\dfrac{\partial u}{\partial x}+\dfrac{\partial h}{\partial v}\dfrac{\partial v}{\partial x}+\dfrac{\partial h}{\partial w}\dfrac{\partial w}{\partial x}$
+	\item $\dfrac{\partial h}{\partial y}=\dfrac{\partial h}{\partial u}\dfrac{\partial u}{\partial y}+\dfrac{\partial h}{\partial v}\dfrac{\partial v}{\partial y}+\dfrac{\partial h}{\partial w}\dfrac{\partial w}{\partial y}$
+	\item $\dfrac{\partial h}{\partial z}=\dfrac{\partial h}{\partial u}\dfrac{\partial u}{\partial z}+\dfrac{\partial h}{\partial v}\dfrac{\partial v}{\partial z}+\dfrac{\partial h}{\partial w}\dfrac{\partial w}{\partial z}$
+\end{itemize}
+
+Si f(u,v) y g(x,y) entonces $Df\circ g=Df(g(x_0,y_0))Dg(x_0,y_0)$ pag 140.
+
+\subsection{Teorema de Taylor (4.1)}
+\subsubsection{Aproximación lineal o de primer orden}
+
+$f(x,y)=f(a,b)+f'_x(a,b)(x-a)+f'_y(a,b)(y-b)$, son los mismos pasos del plano
+
+\subsubsection{Aproximación de segundo orden}
+
+$f(x,y)=f(a,b)+f'_x(a,b)(x-a)+f'_y(a,b)(y-b)+\dfrac{1}{2}f''_{xx}(a,b)(x-a)^2+\dfrac{1}{2}f''_{xy}(a,b)(y-b)^2$, Revisar en el libro (242)
+
+\subsection{Máximos y mínimos sin región (4.2)}
+\begin{enumerate}
+	\item Encontrar derivadas parciales con respecto a x y y, $f'_{x}$ y $f'_{y}$.
+	\item Igualar a cero y despejar las variables, esos son los puntos críticos o estacionarios.
+	\item Encontrar las segundas derivadas $f''_{xx}$, $f''_{yy}$ y $f''_{xy}$
+	\item Encontrar el discriminante $D$
+	
+	H=$\begin{pmatrix}
+	f''_{xx} & f''_{xy} \\
+	f''_{xy} & f''_{yy} \\
+	\end{pmatrix}$
+	
+	$D=\det H$ o $D = f''_{xx}f''_{yy}-(f''_{xy})^2$
+	\item Conclusión 
+	\begin{itemize}
+		\item Si $f''_{xx}>0$ y $D>0$ es un mínimo
+		\item Si $f''_{xx}<0$ y $D>0$ es un máximo
+		\item Si $D<0$ es un punto de silla
+	\end{itemize}
+\end{enumerate}
+
+Ej: $f(x,y)=x^3+y^3-9xy+27$ en (0,0) (0,1) (1,1)
+
+\subsection{Máximos y mínimos absolutos}
+
+\begin{enumerate}
+	\item Encontrar derivadas parciales con respecto a x y y, $f'_{x}$ y $f'_{y}$.
+	\item Igualar a cero y despejar las variables, esos son los puntos críticos o estacionarios.
+	\item Encontrar las segundas derivadas $f''_{xx}$, $f''_{yy}$ y $f''_{xy}$
+	\item Dibujar región
+	\item Nombrar los bordes de la región.
+	\item Calcular para cada borde una función, reemplazando el borde en la original.
+	\item Derivar e igualar a cero cada función y encontrar puntos
+	\item Escoger puntos que están en la región y las esquinas (En un círculo las esquinas son los cortes con el eje x).
+	\item Reemplazar todos los puntos en la original.
+	\item Verificar cual es el máx y cual es el mín absoluto. 
+\end{enumerate}
+
+\subsection{Lagrange (4.3)}
+
+$$\nabla f(x_1,x_2,\dots,x_n)=\lambda \nabla g(x_1,x_2,\dots,x_n)$$
+$$g(x_1,x_2,\dots,x_n)=c$$
+
+Si preguntan condiciones necesarias y suficientes. Las condiciones necesarias son las primeras derivadas $\mathcal{L}_x$, $\mathcal{L}_y$ y $\mathcal{L}_\lambda$ y las condiciones suficientes es que es que el punto que se encuentre sea máximo o mínimo de acuerdo a lo que se está pidiendo.
+
+\begin{enumerate}
+	\item Plantear Lagrangiano, $\mathcal{L}=funcion - \lambda(restriccion)$. La restricción debe estar igualada a cero.
+	\item Encontrar $\mathcal{L}_x$, $\mathcal{L}_y$ y $\mathcal{L}_\lambda$
+	\item Igualar a cero todas las derivadas y despejar $\lambda$ de cada una.
+	\item Igualar los $\lambda$ y encontrar alguna variable.
+	\item Reemplazar esa variable en la restricción y encontrar todas las variables.
+	\item Verificar que cumple.
+	\begin{itemize}
+		\item Método 1: Hessiano limitado
+		
+		$$H=\begin{pmatrix}
+		0 & -g'_x & -g'_y \\
+		-g'_x & \mathcal{L}''_{xx} & \mathcal{L}''_{xy} \\
+		-g'_y & \mathcal{L}''_{xy} & \mathcal{L}''_{yy} \\
+		\end{pmatrix}$$
+		Reemplazar para cada punto y si encontrar el determinante, si da positivo es máximo, si da negativo es mínimo. g es la restricción.
+		\item Método 2: Inventarse un punto que cumpla la restricción y evaluar todos los puntos en la original, comparar con el inventado para saber cual es mayor y cual es menor.
+		
+	\end{itemize}
+	\item si hay 2 restricciones  $\mathcal{L}=funcion - \lambda_1(restriccion1)-\lambda_2(restriccion2)$ y seguir los mismos pasos.
+\end{enumerate}
+
+\subsection{Derivación implícita}
+Se usa cuando no dan z despejada
+
+\begin{enumerate}
+	\item Igualar a cero y llamar a eso F
+	\item Derivar F con respecto a todas las letras $f'_x \qquad f'_y \qquad f'_z$
+	\item Encontrar lo que pidan, ejemplo $z'_x=-\dfrac{f'_x}{f'_z}$
+\end{enumerate}
+
+\subsection{Integrales dobles (5.3)}
+
+\subsubsection{Cambio de orden de integración, cuando la integral es difícil}
+
+$$\underbrace{\int\overbrace{\int f(x,y)dy}^{funciones}dx}_{Numeros}$$
+
+Si f(x,y)=1, la doble integral es el área
+
+Pasos
+
+\begin{enumerate}
+	\item Dibujar región, sacar ecuación de cada límite de integración.
+	\item Cambiar orden y límites de integración. $\int\int f(x,y)dydx$
+	\item Integrar, puede ser sustitución o partes.
+\end{enumerate}
+
+\subsubsection{Teorema del valor medio (5.4)}
+
+$$f(x_0,y_0)=\dfrac{1}{A(D)}\int_Df(x,y)dA$$
+
+\subsection{Integrales triples}
+$$\underbrace{\int\overbrace{\int \int f(x,y)dxdy}^{funciones}dz}_{Numeros}$$
+
+Si f(x,y,z)=1, la triple integral es el volumen
+\subsection{Cambio de variable}
+
+\begin{enumerate}
+	\item Encontrar el Jacobiano
+	\begin{itemize}
+		\item Si x y y dependen de u y v
+		$$
+		J=\left|\begin{tabular}{ccc}
+		$\dfrac{dx}{du}$ & $\dfrac{dx}{dv}$ \\
+		$\dfrac{dy}{du}$ & $\dfrac{dy}{dv}$
+		\end{tabular}\right|
+		$$
+		\item Si u y v dependen de x y y
+		$$
+		J=\dfrac{1}{\left|\begin{tabular}{ccc}
+			$\dfrac{du}{dx}$ & $\dfrac{du}{dy}$ \\
+			$\dfrac{dv}{dx}$ & $\dfrac{dv}{dy}$
+			\end{tabular}\right|}
+		$$
+	\end{itemize}
+	\item Encontrar ecuaciones para u y v (Despejar si dan x y y en términos de u y v)
+	\item Graficar en los plano xy y uv
+	\item $\int\int f(u,v)|J|dudv$, el Jacobiano es positivo 
+	\item Para polares el Jacobiano es $r$
+	
+\end{enumerate}
+
+
+
+
+
+\subsection{Cóncava y convexa}
+\subsubsection{Método 1: Hessiana}
+\begin{enumerate}
+	\item Primeras derivadas
+	\item Segundas derivadas
+	\item Concluir
+	\begin{itemize}
+		\item Si $f''_{xx}\geq0$ y $f''_{yy}\geq0$ y $\det(H)\geq0$ es un convexa
+		\item Si $f''_{xx}\leq0$ y $f''_{yy}\leq0$ y $\det(H)\geq0$ es un concava
+		\item Si $f''_{xx}>0$ y $f''_{yy}>0$ es estrictamente convexa
+		\item Si $f''_{xx}<0$ y $f''_{yy}<0$ es estrictamente cóncava
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Método 1: Propiedades}
+\begin{enumerate}
+	\item Lineal, cóncava o convexa a conveniencia.
+	\item Potencias pares $x^2,\ y^4$, convexa
+	\item Potencias impares $x^3,\ y^5$, convexa si $x>0$ y cóncava si $x<0$
+	\item Raíces pares $\sqrt[2]{x},\ \sqrt[4]{x}$
+	\item $e^{algo}$ convexo si algo es convexo
+	\item $ln(algo)$ cóncavo si algo es cóncavo
+	\item Suma de cóncavas es cóncava.
+	\item Suma de convexas es convexa.
+	\item Compuesta de convexas es convexa.
+	\item Compuesta de cóncavas es cóncava.
+	\item -convexa es cóncava
+	\item -cóncava es convexa
+	\item Cobb-Douglas $x^ay^b$ si $a+b\leq1$ es concava. Si $a+b<1$ es estrictamente cóncava
+	\item Si es concava es cuasiconcava
+	\item Si es convexa es cuasiconvexa	
+\end{enumerate}
+
+Ej: Diga si es cóncava o convexa $3x^{1/4}y^{1/2}z^{1/8}-e^{x^2+y^2+z}+ln(x^2y^3\sqrt{z})$
+

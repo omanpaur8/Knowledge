@@ -1,0 +1,900 @@
+\section{ESTADÍSTICA}
+
+\subsection{Tipos de variables}
+
+\begin{itemize}
+	\item Cualitativas: Variables que expresan cualidades o caracteristicas.
+	\begin{itemize}
+		\item Nominales: No tienen un orden establecido como por ejemplo los colores, los departamentos, etc.
+		\item Ordinales: Tienen un orden establecido o una escala implicita, por ejemplo nivel de dolor: fuerte, moderado, leve
+	\end{itemize}
+	\item Cuantitativas:Variables que toman valores numéricos.
+	\begin{itemize}
+		\item Discretas: Variable que no toma valores intermedios o tiene un número finito de posibilidades, Ejemplo Número de hijos
+		\item Continuas: pueden tomar cualquier valor, ejemplo el peso.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Datos agrupados}
+\begin{enumerate}
+	\item Número de intervalos $N=\sqrt{n}$
+	\item Rango $R=Max- Min$
+	\item Longitud del intervalo $L=R/N$
+	\item Marca de clase $x=\dfrac{Lim\ Sup-Lim\ Inf}{2}$
+	\item Polígono de frecuencias
+\end{enumerate}
+
+
+
+\subsection{Cuartiles}
+\textbf{Datos no agrupados}
+\begin{itemize}
+	\item ordenar los datos
+	\item posición $Q_1=\dfrac{N+1}{4}$, $Q_2=2\dfrac{N+1}{4}$, $Q_3=3\dfrac{N+1}{4}$
+	\item El cuartil 1 (Q1) es el percentil 25 (P25). El $25\%$ de los datos está por debajo de...
+	\item El cuartil 2 (Q2) es la mediana y el percentil 50 (P50). El $50\%$ de los datos está por debajo de...
+	\item El cuartil 3 (Q3) es el percentil 75 (P75). El $75\%$ de los datos está por debajo de...
+\end{itemize}
+
+\textbf{Datos agrupados}
+
+$Q_k=L_k+\dfrac{k\dfrac{N}{4}-F_{k-1}}{f_k}A_c$
+
+\begin{itemize}
+	\item $L_k$: límite inferior de la clase o rango donde está el cuartil k
+	\item $N$: Total de datos
+	\item $F_k$: Frecuencia acumulada de la clase anterior
+	\item $f_k$: Frecuencia de la clase donde está el cuartil k
+	\item $A_c$: Amplitud de la clase
+\end{itemize}
+Mediana: $\dfrac{n/2-N_{i-1}}{n_i}w+Li$
+\subsection{Medidas}
+
+\begin{itemize}
+	\item Rango: diferencia entre el mayor y menor valor
+	\item Rango intercuartil: Diferencia entre tercer y primer cuartil.
+	\item Covarianza muestral: $cov(x,y)=\dfrac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{n}=\dfrac{\sum x_iy_i-n\overline{x}\ \overline{y}}{n-1}$
+	\item Correlación muestral $\dfrac{\sum x_iy_i-n\overline{x}\ \overline{y}}{\sqrt{\sum x^2_i-n\overline{x}^2}\sqrt{\sum y^2_i-n\overline{y}^2}}$
+	\item Desviación estandar muestral $\sqrt{\dfrac{\sum(x_i-\overline{x})^2}{n-1}}=\sqrt{\dfrac{\sum x^2_i-n\overline{x}^2}{n-1}}$
+	\item Regla de Sturges n intervalos$=1+log_2(N)=1+3.32log(N)$
+\end{itemize}
+
+\subsection{Capítulo 6}
+\subsubsection{Método de las distribuciones}
+Para una sola variable
+\begin{enumerate}
+	\item Encontrar la función de distribución de u mediante $F_u=P(U\leq u)$
+	\item Reemplazar U por la variable que den en el enunciado y despejar "Y"
+	\item Encontrar la probabilidad que queda
+	\begin{itemize}
+		\item $P(y<a)$
+		\item $P(y>a)$
+		\item $P(a<y<b)$
+	\end{itemize}
+	\item Derivar $F_u$ para encontrar $f_u$
+	\item Encontrar los límites de u y escribir la función.
+\end{enumerate}
+
+Para 2 variables
+\begin{enumerate}
+	\item Dibujar la región
+	\item Dibujar rectas imaginarias despejando y
+	\item Hacer la integral dole de cada recta imaginaria y eso da $F_u=P(U\leq u)$
+	\item Derivar $F_u$ para encontrar $f_u$
+\end{enumerate}
+
+\subsubsection{Método de las transformaciones}
+
+Para una variable
+\begin{enumerate}
+	\item Despejar "y", eso es $h^{-1}(u)$
+	\item Derivar $h^{-1}(u)$ con respecto a u
+	\item Reemplazar en la fórmula $f_u(u)=f_y(h^{-1}(u))\left| \dfrac{dh^{-1}}{du} \right| $
+\end{enumerate}
+Para 2 variables
+\begin{enumerate}
+	\item Despejar una de las 2 letras $y_2 o y$, eso es $h^{-1}(u)$
+	\item Derivar $h^{-1}(u)$ con respecto a u
+	\item Reemplazar en la fórmula $f(y_1,h^{-1}(u))=f(y_1,h^{-1}(u))\left| \dfrac{dh^{-1}}{du} \right| $
+	\item Integrar lo anterior respecto a $y_1$ y eso es $f_u$
+\end{enumerate}
+
+\subsubsection{Método de la función generadora de momentos}
+Solo se puede usar si las variables se suman $u=y_1+y_2+\dots+y_n$
+\begin{enumerate}
+	\item Multiplicar las funciones generadoras de momento $m_u(t)=m_{y_1}+m_{y_2}+\dots+m_{y_m}$
+	\item Simplificar y ver a cual función se parece
+\end{enumerate}
+\subsection{Para tener en cuenta:}
+\subsubsection{Parámetros muestrales y Poblacionales}
+
+\begin{tabular}{lcc}
+	\hline \hline
+	Parámetro & Muestral & Poblacional\\
+	\hline
+	Media & $\overline{y}$ & $\mu$\\
+	Varianza & $S^2$ & $\sigma^2$\\
+	Desviación & $S$ & $\sigma $\\
+	Proporción & $\hat{p}$ & $p$\\
+	\hline
+\end{tabular}
+
+
+
+\subsubsection{Propiedades Valor esperado y Varianza}
+\begin{tabular}{cc}
+	\hline \hline
+	Media & Varianza\\
+	\hline
+	$E(a)=a$ & $Var(a)=0$\\
+	$E(ay)=aE(y)$ & $Var(ay)=a^2Var(y)$\\
+	$E(x \pm y)=E(x) \pm E(y)$ & $Var(x \pm y)=Var(x) + Var(y) $\\
+	$E(y_i)=\mu$ & $Var(y_i)=\sigma^2$\\
+	 $E(\overline{y})=\mu$ & $Var(\overline{y})=\dfrac{\sigma^2}{n}$\\
+	\hline
+\end{tabular}\\
+
+Recordar
+
+\begin{itemize}
+	\item $\overline{y}=\dfrac{y_1+y_2+\dots+y_n}{n}$
+	\item $n:$ muestra
+	\item $y_i:$ punto de la muestra
+\end{itemize}
+
+\subsection{Capítulo 7 - Estandarizaciones}
+
+\textbf{Tips}
+\begin{itemize}
+	\item Al encontrar n, siempre aproximar hacia arriba.
+	\item Si dice diferencia de medias o que la media muestral no exceda la media poblacional, se escribe valor absoluto $|\overline{y}-\mu|<\#$.
+	\item Si el valor absoluto es mayor $|\overline{y}-\mu|>\#$, primero se hace $1-|\overline{y}-\mu|<\#$ y luego si se resuelve el valor absoluto.
+	\item Si dan porcentajes, puede ser Aproximación de la Binomial a la Normal.
+	\item Cuando dice real, verdadera, es la poblacional.
+	\item No mas de, A lo sumo, 
+\end{itemize}
+
+
+
+
+
+\subsubsection{Cuando preguntan Probabilidad de media, varianza}
+
+\begin{itemize}
+	\item Normal, si dan $n\geq30$ y $\sigma$ o $S$ y preguntan por la media o la diferencia de medias, Teorema del límite central
+	$$z=\dfrac{\overline{y}-\mu}{\sigma/\sqrt{n}} $$
+	$$z=\dfrac{(\overline{x}-\overline{y})-(\mu_1-\mu_2)}{\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}} $$
+	Propiedades para encontrar probabilidades
+	\begin{itemize}
+		\item $p(z>\#)$ Buscar directamente
+		\item $p(z<\#)=1-p(z>\#)$
+		\item $p(a<z<b)=p(z>a)-p(z>b)$
+		\item $p(-a<z<a)=1-2p(z>a)$
+		\item $p(z>-\#)=1-p(z>\#)$
+		\item $p(z<-\#)=p(z>\#)$
+	\end{itemize}
+	\item t-Student, si dan $n<30$ y dan $S$ y preguntan por la media
+	$$t=\dfrac{\overline{y}-\mu}{S/\sqrt{n}},\qquad n-1\ gl$$
+	\colorbox{yellow}{Propiedades para encontrar probabilidades}
+	
+	\begin{itemize}
+		\item $p(t>\#)$ Buscar directamente
+		\item $p(t<\#)=1-p(t>\#)$
+		\item $p(a<t<b)=p(t>a)-p(t>b)$
+		\item $p(t>-\#)=1-p(t>\#)$
+		\item $p(t<-\#)=p(t>\#)$
+	\end{itemize}
+	\item Chi-Cuadrado, preguntan por la varianza 
+	$$\chi^2=\dfrac{(n-1)S^2}{\sigma^2},\qquad n-1\ gl$$
+	\colorbox{yellow}{Propiedades para encontrar probabilidades}
+	
+	\begin{itemize}
+		\item $p(\chi^2>\#)$ Buscar directamente
+		\item $p(\chi^2<\#)=1-p(\chi^2>\#)$
+		\item $p(a<\chi^2<b)=p(\chi^2>a)-p(\chi^2>b)$
+	\end{itemize}
+	\item Fisher, preguntan por dos varianzas
+	$$F=\dfrac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2},\qquad n_1-1\  gl\ num,\ n_2-1\  gl\ den$$
+	\colorbox{yellow}{Propiedades para encontrar probabilidades}
+	
+	\begin{itemize}
+		\item $p(F>\#)$ Buscar directamente
+		\item $p(F<\#)=1-p(F>\#)$
+		\item $p(a<F<b)=p(F>a)-p(F>b)$
+	\end{itemize}
+\end{itemize}
+
+\textbf{Ejercicios Libro}
+\begin{itemize}
+	\item 7.11, 7.12, 7.43, 7.44, 7.45, 7.52
+	\item 7.19, 7.21,  
+	\item 7.36, 7.37, 7.38, 7.72, 7.73
+\end{itemize}
+
+\subsubsection{Cuando preguntan como se distribuye}
+\begin{enumerate}
+	\item $\sum_{i=1}^{n}Z_i^2$ $\arrowvert$ $\chi_{n \  Gl}^2$
+	\item $\sum_{i=1}^{n} \dfrac{(y_i-\mu)^2}{\sigma^2}$ $\arrowvert$ $\chi_{n \  Gl}^2$
+	\item $\sum_{i=1}^{n}\dfrac{(y_i-\overline{y})^2}{\sigma^2}$ $\arrowvert$ $\chi_{n-1 \  Gl}^2$
+	\item $\dfrac{\sqrt{v}z}{\sqrt{w}}$ $\arrowvert$ t-Student con v Gl que son los mismos Gl de w
+	\item $\dfrac{W_1/v_1}{W_2/v_2}$ $\arrowvert$ Fisher con $v_1$ gl numerador y $v_2$ gl denominador.
+	\item $x^2$ $\arrowvert$ $\chi_{1 \  Gl}^2$
+	\item $x^2+y^2+z^2$ $\arrowvert$ $\chi_{3 \  Gl}^2$
+	\item $(x+y)^2$ $\arrowvert$ $\chi_{1 \  Gl}^2$
+\end{enumerate}
+
+\textbf{Ejercicios Libro}
+\begin{itemize}
+	\item 7.37, 7.38
+\end{itemize}
+
+\subsection{Aproximación de la binomial a la normal}
+Dan n grande y una probabilidad, $np>5$. Preguntan por una probabilidad o una proporción.
+
+Estandarización
+$$z=\dfrac{\hat{p}-p}{\sqrt{\dfrac{p(1-p)}{n}}}$$
+
+$\hat{p}=\dfrac{x}{n}$, donde x es un subtotal y n es la muestra.
+
+$\hat{p}:$ Proporción muestral.
+
+$p:$ Porporción poblacional
+
+Hay otra que preguntan por la variable aleatoria.
+
+$z=\dfrac{x-np}{\sqrt{npq}}$ para jorge arias p es pi
+
+\subsubsection{Corrección de continuidad}
+\begin{itemize}
+	\item $p(\hat{p}\le \#)=p(\hat{p}\le \#+0.5)$
+	\item $p(\hat{p}\ge \#)=p(\hat{p}\ge \#-0.5)$
+	\item $p(\hat{p} < \#)=p(\hat{p}< \#-0.5)$
+	\item $p(\hat{p} > \#)=p(\hat{p}> \#+0.5)$
+\end{itemize}
+
+\textbf{Ejercicios Libro}
+\begin{itemize}
+	\item 7.72, 7.73
+	\end{itemize}
+
+
+\subsection{Capítulo 8 - Estimación}
+
+8.8,
+
+\begin{enumerate}
+	\item Un estimador es insesgado si $E(\hat{\theta})=\theta$, $\theta$ es el parámetro y $\hat{\theta}$ es el estimador.
+	\item El sesgo de un estimador es $Sesgo=E(\hat{\theta})-\theta $
+	\item Error Cuadrático Medio $MSE=Var(\hat{\theta})+(Sesgo)^2$
+	\item Cuando pidan un estimador insesgado, Se iguala $E(\hat{\theta})=\theta$ y se despeja $\hat{\theta}$
+\end{enumerate}
+
+\subsubsection{Propiedades de la esperanza}
+\begin{enumerate}
+	\item $E(a)=a$
+	\item $E(ay)=aE(y)$
+	\item $E(x+y)=E(x)+E(y)$
+\end{enumerate}
+
+\subsubsection{Propiedades de la Varianza}
+\begin{enumerate}
+	\item $Var(a)=0$
+	\item $Var(ay)=a^2Var(y)$
+	\item $Var(x+y)=Var(x)+Var(y)$
+\end{enumerate}
+
+\subsubsection{Para encontrar Varianza y Esperanza}
+\begin{enumerate}
+	\item Ver si la función es conocida, en caso de que si buscar en el tabla.
+	\item Si no es conocida $E(y)=\int_{min}^{max}yf(y)dy$ $E(y^2)=\int_{min}^{max}y^2f(y)dy$ $Var(y)=E(y^2)-[E(y)]^2$ 
+\end{enumerate}
+
+\subsubsection{Funciones MAX y MIN}
+$$y_{(1)}=min(y_1,y_2,\dots,y_n)$$
+$$y_{(n)}=max(y_1,y_2,\dots,y_n)$$
+Para encontrar la esperanza del Min o Max
+
+\begin{enumerate}
+	\item Encontrar F(y)
+	$$F(y)=\int_{min}^{y}f(t)dt$$
+	\item Encontrar la función de densidad del Min o Max.
+	$$min=f_{(1)}=n[1-F(y)]^{n-1}f(y)$$
+	$$max=f_{(n)}=n[F(y)]^{n-1}f(y)$$
+	\item Encontrar la esperanza
+	$$E(f_{(1)})=\int_{min}^{max}yf_{(1)}dy$$
+	$$E(f_{(n)})=\int_{min}^{max}yf_{(n)}dy$$
+\end{enumerate}
+
+\textbf{Ejercicios}
+
+\subsection{Capítulo 8 - Intervalos de confianza}
+
+\textbf{Ejercicios} 8.58, 8.59, 8.95
+
+\textbf{Para concluir en la diferencias de medias o proporciones}
+\begin{enumerate}
+	\item $1-\alpha:$ Nivel de confianza
+	\item $\alpha:$ Nivel de significancia.
+	\item Si ambos intervalos son positivos es mayor la media o proporción de la población 1.
+	\item Si ambos intervalos son negativos es mayor la media o porporción de la población 2.
+	\item Si hay uno positivo y otro negativo, no se puede concluir.
+\end{enumerate}
+
+\subsubsection{Intervalo de confianza para la media}
+\begin{itemize}
+	\item $\sigma$ conocida o $n\geq30$
+	$(\overline{y}\pm z_{\alpha/2}\dfrac{\sigma}{\sqrt{n}})$
+	\item $\sigma$ desconocida y $n<30$
+	$(\overline{y}\pm t_{\alpha/2}\dfrac{s}{\sqrt{n}})$
+\end{itemize}
+
+\subsubsection{Intervalo de confianza para la diferencia de medias}
+
+\begin{itemize}
+	\item Varianzas poblacionales conocidas, $n\ge30$ $(\overline{y}_1- \overline{y}_2)\pm z_{\alpha/2}\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}$
+	\item Varianzas poblacionales desconocidas e iguales, $n<30$ $(\overline{y}_1- \overline{y}_2)\pm t_{\alpha/2}S_p\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}$ 
+	
+	$S_p=\sqrt{\dfrac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}$
+	
+	$gl=n_1+n_2-2$
+	\item Varianzas poblacionales desconocidas y diferentes $(\overline{y}_1- \overline{y}_2)\pm t_{\alpha/2}\sqrt{\dfrac{S_1^2}{n_1}+\dfrac{S_2^2}{n_2}}$ 
+	
+	$gl=\dfrac{\left( \dfrac{S_1^2}{n_1}+\dfrac{S_2^2}{n_2}\right) ^2}{\dfrac{\left( \dfrac{S_1^2}{n_1}\right) ^2}{n_1-1}+\dfrac{\left( \dfrac{S_2^2}{n_2}\right) ^2}{n_2-1}}$
+\end{itemize}
+
+
+\subsubsection{Intervalo de confianza para la proporción}
+
+$\left( \hat{p}\pm z_{\alpha/2}\sqrt{\dfrac{\hat{p}\hat{q}}{n}}\right) $
+
+\subsubsection{Intervalo de confianza para 2 proporciones}
+
+$\left( \hat{p}_1-\hat{p}_2\pm z_{\alpha/2}\sqrt{\dfrac{\hat{p_1}(1-\hat{p}_1)}{n_1}+\dfrac{\hat{p_2}(1-\hat{p}_2)}{n_2}}\right) $
+
+\subsubsection{Intervalo de confianza para la varianza}
+
+$\left( \dfrac{(n-1)s^2}{\chi^2_D},\dfrac{(n-1)s^2}{\chi^2_I}\right) $
+
+\begin{itemize}	
+	\item Si es cola derecha $\chi^2_D=\chi^2_{\alpha/2}$ y $\chi^2_I=\chi^2_{1-\alpha/2}$
+	\item Si es cola izquierda $\chi^2_D=\chi^2_{1-\alpha/2}$ y $\chi^2_I=\chi^2_{\alpha/2}$
+\end{itemize}
+
+\subsubsection{Intervalo de confianza para la Desviación}
+
+$\left( \sqrt{\dfrac{(n-1)s^2}{\chi^2_D}},\sqrt{\dfrac{(n-1)s^2}{\chi^2_I}}\right) $
+
+\subsubsection{Intervalo de confianza para dos varianzas}
+
+$\left( \dfrac{s_1^2}{s_2^2}F_{1-\alpha/2},\dfrac{s_1^2}{s_2^2}F_{\alpha/2}\right) $
+
+\begin{itemize}	
+	\item Si es cola derecha $F_{1-\alpha/2}=\dfrac{1}{F_{\alpha/2}(n2,n1)}$
+	\item Si es cola izquierda $F_{\alpha/2}=\dfrac{1}{F_{1-\alpha/2}(n2,n1)}$
+\end{itemize}
+
+\subsubsection{Si preguntan tamaño muestral}
+
+Si dan un error se iguala a $z_{\alpha/2}\text{Error estandar}$ (El error completo es lo que está después del $\pm$ y el error estándar es lo que está después de la z o la t) y se despeja n.
+
+\begin{itemize}
+	\item Para la media $n=\dfrac{z_{\alpha/2}^2\sigma^2}{e^2}$
+	\item Para diferencia de medias $n=\dfrac{z_{\alpha/2}^2(\sigma_1^2+\sigma_2^2)}{e^2}$
+	\item Para diferencia de proporciones $n=\dfrac{z_{\alpha/2}^2( \hat{p}_1(1-\hat{p}_1)+\hat{p}_2(1-\hat{p}_2)) }{e^2}$
+\end{itemize}
+
+\subsubsection{Límite de error}
+El límite de error es dos veces el error estándar
+
+\subsection{Capítulo 9 Walpole- Intervalos de predicción}
+Son intervalos que se realizan para una muestra.
+
+Si se conoce la varianza
+$$\overline{x}-z_{\alpha/2}\sigma\sqrt{1+1/n}<x_0<\overline{x}+z_{\alpha/2}\sigma\sqrt{1+1/n}$$
+
+Si se desconoce la varianza
+$$\overline{x}-t_{\alpha/2}S\sqrt{1+1/n}<x_0<\overline{x}+t_{\alpha/2}S\sqrt{1+1/n}$$
+
+n-1 grados de libertad.
+
+Para datos no agrupados
+\begin{itemize}
+	\item $\overline{x}=\dfrac{\sum x_i}{n}$
+	\item $s=\sqrt{\dfrac{\sum (x_i-\overline{x})^2}{n-1}}$
+\end{itemize}
+
+\subsection{Capítulo 9 - Propiedades de estimadores}
+\subsubsection{Propiedades}
+\begin{itemize}
+	\item Eficiencia\\
+	$eff(\hat{\theta}_1,\hat{\theta}_2)=\dfrac{var(\hat{\theta}_2)}{var(\hat{\theta}_1)}$\\
+	El de varianza mas pequeña es mas eficiente.
+	\textbf{Recordar }$E(\overline{y})=E(y)$, $Var(\overline{y})=\dfrac{var(y)}{n}$
+	\item Consistencia
+	\begin{enumerate}
+		\item Verificar que el estimador sea insesgado.
+		\item Encontrar la varianza.
+		\item $\lim\limits_{n->\infty}Var(\hat{\theta})$
+		\item Si el límite da cero y es insesgado es consistente.
+	\end{enumerate}
+	\item Suficiencia
+	\item Encontrar la función de máxima verosimilitud
+	$$L=f(y_1)f(y_2)\dots f(y_n)$$
+	\item Simplificar con propiedades de exponentes
+	\begin{itemize}
+		\item $\alpha \alpha \dots \alpha=\alpha^n$
+		\item $\alpha+ \alpha+ \dots +\alpha=\alpha n$
+		\item $e^{\alpha}e^{\alpha}\dots e^{\alpha}=e^{\alpha n}$
+		\item $e^{y_1}e^{y_2}\dots e^{y_n}=e^{y_1+y_2+\dots +y_n}=e^{\sum y_i}$
+		\item $y_1^\alpha y_2^\alpha\dots y_n^\alpha=(y_1y_2\dots y_n)^\alpha$
+		\item $\prod_{i=1}^{n}y_i=y_1y_2\dots y_n$
+		\item $\sum_{i=1}^{n}y_i=y_1+y_2+\dots +y_n$
+	\end{itemize}
+	\item Hacer que aparezca el estimador en lo anterior
+	\item Separar en 2 funciones $f(y_1,y_2,\dots,y_n)$ una que solo dependa de y's y otra $g(\theta,\hat{\theta})$ que dependa del parámetro y el estimador. Si esto se logra es suficiente.
+	\item Estimador de varianza mínima (Cota de Rao Cramer)
+	\item Sacar ln a la función
+	\item Usar propiedades de ln
+	\item Derivar lo anterior con respecto al parámetro
+	\item Elevar al cuadrado lo anterior y romper paréntesis
+	\item Encontrar la esperanza de lo anterior.
+	\item Multiplicar por n
+	\item Hacer $\dfrac{1}{anterior}$, eso es la cota de rao cramer $var(\hat{\theta})\geq\dfrac{1}{nE[(\dfrac{d\ ln f}{d\theta})^2]}$
+	\item Si $var(\hat{\theta})=paso anterior$ se dice que es de varianza mínima
+\end{itemize}
+
+
+
+\subsubsection{Métodos para encontrar estimadores}
+
+\begin{itemize}
+	\item Método de momentos
+	\begin{enumerate}
+		\item Encontrar la esperanza
+		\begin{itemize}
+			\item Si la función es conocida, Buscar en la hoja de fórmulas.
+			\item Si la función no es conocida $\int_{min}^{max}yf(y)dy$
+		\end{itemize}
+	\item Igualar la esperanza a $\overline{y}$ y despejar el parámetro
+	\item Si hay 2 parámetros encontrar $E(y^2)$ e igualar a $\dfrac{\sum y_i^2}{n}$
+	\item Despejar los parámetros de las ecuaciones 2 y 3 y no olvidar al final poner gorrito a los parámetros.
+	\end{enumerate}
+	\item Método de máxima verosimilitud
+	\begin{enumerate}
+		\item Encontrar la función de máxima verosimilitud
+		$$L=f(y_1)f(y_2)\dots f(y_n)$$
+		\item Simplificar con propiedades de exponentes
+		\item Sacar Ln a ambos lados
+		\item Usar propiedades de logaritmos
+		\begin{itemize}
+			\item $\ln(xy)=\ln(x)+\ln(y)$
+			\item $\ln(\dfrac{x}{y})=\ln(x)-\ln(y)$
+			\item $\ln(e^{algo})=algo$
+		\end{itemize}
+		\item Derivar con respecto al parámetro
+		\item Igualar  a cero y despejar el parámetro, no olvidar ponerle gorrito.
+	\end{enumerate}
+\end{itemize}
+
+
+\subsubsection{MVUE}
+\textbf{Ejercicios}
+\begin{itemize}
+	\item 9.3, 9.39, 9.43, 9.74, 9.85, 9.88
+\end{itemize}
+
+\subsection{Capítulo 10 - Pruebas de hipótesis}
+
+\begin{enumerate}
+	\item $H_0:$ Hipótesis nula, siempre se pone $=$
+	\item $H_a:$ Hipótesis alterna, lo que dice el enunciado.
+	\item Estadístico de prueba: Buscar en hoja de fórmulas.
+	\item Región de rechazo, se hace con $H_a$.
+	\begin{itemize}
+		\item $H_a: \qquad >$ cola derecha
+		\item $H_a: \qquad <$ cola izquierda
+		\item $H_a: \qquad \not =$ Dos colas
+	\end{itemize}
+\item $p-valor$
+	Si $p-valor<\alpha$ se rechaza $h_0$
+	\begin{itemize}
+		\item Si es cola derecha $P(z>e_p)$
+		\item Si es cola izquierda $P(z<e_p)=1-p(z>e_p)$
+		\item Si es a dos colas $2P(z>|e_p|)$
+	\end{itemize}
+	\item Conclusión: la evidencia sugiere rechazar $H_0$ pues..... o No existe suficiente evidencia que permita aceptar $H_0$
+\end{enumerate}
+
+\subsubsection{Estadísticos de prueba}
+
+\begin{itemize}
+	\item Media muestral, $\mu$
+	
+	\begin{tabular}{|c|c|}
+		\hline
+		$\sigma$ conocida & $\sigma$ desconocida\\
+		\hline
+		$Z_p=\dfrac{\overline{y}-\mu}{\sigma/\sqrt{n}}$ & $t_p=\dfrac{\overline{y}-\mu}{s/\sqrt{n}}$ n-1 gl\\
+		\hline
+	\end{tabular}
+
+	\item Diferencia de medias, $\mu_1-\mu_2$
+	
+	\begin{tabular}{|c|c|}
+		\hline
+		$\sigma_1$ y $\sigma_2$  conocidas & $\sigma_1$ y $\sigma_2$ desconocidas\\
+		\hline
+		$Z_p=\dfrac{\overline{y_1}-\overline{y_2}-(\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}}$ & $t_p=\dfrac{\overline{y_1}-\overline{y_2}-(\mu_1-\mu_2)}{S_p\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}}$ $n_1+n_2-2$ gl.\\
+		&$S_p=\sqrt{\dfrac{S_1^2(n_1-1)+S_2^2(n_2-1)}{n_1+n_2-2}}$\\
+		\hline
+	\end{tabular}
+	\item Proporción, $p$
+	$$Z_p=\dfrac{\hat{p}-p}{\sqrt{\dfrac{p(1-p)}{n}}}$$
+	\item Diferencia de proporciones, $p$
+	$$Z_p=\dfrac{\hat{p_1}-\hat{p_2}}{\sqrt{\hat{p_p}(1-\hat{p_p})(\dfrac{1}{n_1}+\dfrac{1}{n_2}})}$$
+	$$\hat{p_p}=\dfrac{n_1\hat{p_1}+n_2\hat{p_2}}{n_1+n_2}$$
+	
+	\item Varianza
+	$$\chi^2_p=\dfrac{(n-1)S^2}{\sigma^2}$$
+	
+	\item Varianzas de dos poblaciones
+	$$F_p=\dfrac{S_1^2}{S_2^2}$$
+\end{itemize}
+
+\subsubsection{Error tipo I}
+H0 es rechazada cuando H0 es verdadera
+
+$$\alpha=P\left( \dfrac{region\ de\ rechazo}{H_0\ es\ verdad}\right) $$
+\subsubsection{Error tipo II}
+H0 es aceptada cuando Ha es verdadera
+
+
+$$\beta=P\left( \dfrac{region\ de\ aceptacion}{H_a\ es\ verdad}\right) $$
+
+\textbf{Pasos}
+\begin{enumerate}
+	\item Encontrar la región de rechazo, se despeja el parámetro muestral del Ep original y se reemplazan los valores originales.
+	\item Escribir la región de aceptación (voltear la desigualdad).
+	\item Se plantea $\alpha=P(region\ de\ rechazo)$ y $\beta=P(region\ de\ aceptacion)$
+	\item Estandarizar, para $\alpha$ usar $H_0$ y para beta usar $H_1$
+	(Lo dan)
+\end{enumerate}
+
+Para encontrar n
+$$n=\dfrac{(z_\alpha+z_\beta)^2\sigma^2}{\mu_a-\mu_0}$$
+\subsection{Capítulo 11 - Regresión lineal}
+
+\subsubsection{SSE-Suma de las desviaciones o errores al cuadrado}
+
+$SSE=\sum_{i=0}^{n}(y_i-\hat{y}_i)^2=\sum_{i=0}^{n}(y_i-(\hat{\beta}_0+\hat{\beta}_1x_i))^2$
+
+\subsubsection{Método de Mínimos cuadrados}
+
+$Y=\hat{\beta_0}+\hat{\beta_1}X$
+\begin{itemize}
+	\item X: Variable independiente
+	\item Y: Variable dependiente
+\end{itemize}
+
+\textit{Pasos}
+\begin{enumerate}
+	\item Escribir la tabla verticalmente.
+	\item Calcular $x^2$, $y^2$ y $xy$.
+	\item Encontrar totales por columna.
+	\item Calcular Sxx, Sxy, Syy, $\overline{x}=\dfrac{\sum x}{n}$, $\overline{y}=\dfrac{\sum y}{n}$, n es el $\#$ de filas o renglones en la tabla.
+	\item $\hat{\beta_1}=\dfrac{Sxy}{Sxx}$ $\hat{\beta_0}=\overline{y}-\hat{\beta_1}\overline{x}$
+	\item Calculo de SSE y $S^2$. $SSE=S_{yy}-\hat{\beta_1}S_{xy}$. $S^2=\dfrac{SSE}{n-2}$
+	\item Prueba de hipótesis para $\hat{\beta_1}$ o $\hat{\beta_0}$
+	\item Intervalos de confianza para  $\hat{\beta_1}$, $\hat{\beta_0}$, $E(y)$ y para $Y$
+	\item Coeficiente de correlación $r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}=\hat{\beta_1}\sqrt{\dfrac{S_{xx}}{S_{yy}}}$
+	\item Coeficiente de determinación $r^2$
+	\item Prueba de hipótesis para $\rho$
+	\item $R^2$ es la parte de la variación de los datos que explica el modelo. Es la suma de cuadrados totales que se explica con el modelo (SCM). $R^2=\dfrac{SCM}{SCR}=1-\dfrac{SCR}{SCT}$
+	
+	\item SCT=SCR+SCM. Suma de cuadrados totales es suma de cuadradados del modelo mas suma de cuadrados residuales
+\end{enumerate}
+
+\subsubsection{Regresión múltiple}
+
+$$Y=\hat{\beta_0}+\hat{\beta_1}X_1+\hat{\beta_2}X_2+\dots+\hat{\beta_k}X_k$$
+$$Y=\hat{\beta_0}+\hat{\beta_1}X+\hat{\beta_2}X^2$$
+\begin{enumerate}
+	\item Plantear vector Y y Matriz X
+	$Y=\begin{pmatrix}
+	y_1 \\
+	y_2\\
+	\vdots\\
+	y_n \\
+	\end{pmatrix}$
+	$X=\begin{pmatrix}
+	1 & x_{11} & x_{21}\\
+	1 & x_{12} & x_{22}\\
+	\vdots\\
+	1 & x_{1n} & x_{2n}\\
+	\end{pmatrix}$
+	\item Encontrar $X^TX$ y $X^TY$
+	\item Encontrar la inversa de $X^TX$ 
+	\item Encontrar Betas $\hat{\beta}=(X^TX)^{-1}(X^TY)=\begin{pmatrix}
+	\hat{\beta_0} \\
+	\hat{\beta_1}\\
+	\vdots\\
+	\hat{\beta_k} \\
+	\end{pmatrix}$
+	\item $S^2=\dfrac{SSE}{n-(k+1)}=\dfrac{Y^TY-\hat{\beta}^TX^TY}{n-(k+1)}$
+	\item Intervalo de confianza $\hat{\beta_k}\pm t_{\alpha/2}S\sqrt{c_{kk}}$ $c_{kk}$: elemento de la diagonal de la inversa de $X^TX$ 
+	\item Prueba de hipótesis, $T=\dfrac{\hat{\beta_k}-\beta_k}{S\sqrt{c_{kk}}}$, $gl=n-(k+1)$
+	\item Intervalo de confianza para Y $a^T\hat{\beta}\pm t_{\alpha/2}S\sqrt{1+a^T(X^TX)^{-1}a}$ donde $a=[1,x_1,x_2\dots]$
+\end{enumerate}
+
+\subsection{Capítulo 14}
+
+\subsubsection{Pruebas de bondad de ajuste}
+\begin{itemize}
+	\item Cuando dice si las proporciones son iguales o diferentes.
+	\begin{enumerate}
+		\item $H_o$: $P_1=P_2=\dots=P_k$, k es el número de renglones\\
+		$H_o$: $P_1=a_1, P_2=a_2,\dots P_k=a_k$, k es el número de renglones\\
+		$H_a$:  $P_1\not=P_2\not=\dots\not=P_k$
+		\item Encontrar esperanzas $E(n_i)=N*P_i$, $P_i$ son las probabilidades de cada frecuencia, si no la dan $P_i=\dfrac{1}{k}$ y es la misma para todos.
+		\item Estadístico de prueba $\chi^2=\sum\dfrac{(n_i-E(n_i))^2}{E(n_i)}$
+		\item Región de rechazo, cola derecha, $gl=k-1$
+	\end{enumerate}
+	\item Cuando preguntan si se distribuye como (algo).
+	\begin{enumerate}
+		\item $H_o$: Los datos se distribuyen como (algo)\\
+		$H_a$:  Los datos no se distribuyen como (algo)
+		\item Encontrar datos faltantes
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Binomial & Poisson & Normal\\
+			\hline
+			n= $\#$ mayor de la columna de Y (éxitos). & $\lambda=\dfrac{\sum y*n_i}{N}$ & Marca de clase $=\dfrac{lim sup+lim inf}{2}$\\
+			$P=\sum \dfrac{y*n_i}{N*n}$ & & \\
+			\hline
+		\end{tabular}
+		\item Encontrar $P_i$
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Binomial & Poisson & Normal\\
+			\hline
+			$P_i= \binom{n}{y}p^y(1-p)^{n-y}$ & $P_i=\dfrac{e^{-\lambda}\lambda^y}{y!}$ & Estandarizar y buscar en la tabla.\\
+			\hline
+		\end{tabular}
+		\item Encontrar esperanzas $E(n_i)=N*P_i$, $P_i$ son las probabilidades de cada frecuencia.
+		\item Estadístico de prueba $\chi^2=\sum\dfrac{(n_i-E(n_i))^2}{E(n_i)}$
+		\item Región de rechazo, cola derecha, $gl=k-2$
+	\end{enumerate}
+\end{itemize}
+
+\subsubsection{Tablas de contingencia}
+\begin{itemize}
+	\item Si preguntan si los datos son independientes o dependientes.
+	\begin{enumerate}
+		\item $H_o$: Los datos  o variables son independientes\\
+		$H_a$: Los datos o variables no son independientes
+		\item Calcular total de filas y columnas
+		\item Calcular tabla de esperanzas. $E(n_{ij})=\dfrac{r_i*c_j}{N}$
+		\item Estadístico de prueba $\chi^2=\sum\dfrac{(n_i-E(n_i))^2}{E(n_i)}$
+		\item Región de rechazo, cola derecha, $gl=(r-1)(c-1)$
+	\end{enumerate}
+	\item Si preguntan si las probabilidades son iguales o no.
+	\begin{enumerate}
+		\item $H_o$: $P_1=P_2=\dots=P_k$, k es el número de renglones\\
+		$H_a$:  $P_1\not=P_2\not=\dots\not=P_k$
+		\item Calcular total de filas y columnas
+		\item Calcular tabla de esperanzas. $E(n_{ij})=\dfrac{r_i*c_j}{N}$
+		\item Estadístico de prueba $\chi^2=\sum\dfrac{(n_i-E(n_i))^2}{E(n_i)}$
+		\item Región de rechazo, cola derecha, $gl=(r-1)(c-1)$
+	\end{enumerate}
+\end{itemize}
+
+\subsection{Regresión en R}
+\begin{verbatim}
+	## 
+	## Call:
+	## lm(formula = grasas ~ edad, data = grasas)
+	## 
+	## Residuals:
+	##     Min      1Q  Median      3Q     Max 
+	## -63.478 -26.816  -3.854  28.315  90.881 
+	## 
+	## Coefficients:
+	##             Estimate Std. Error t value Pr(>|t|)    
+	## (Intercept) 102.5751    29.6376   3.461  0.00212 ** 
+	## x             5.3207     0.7243   7.346 1.79e-07 ***
+	## ---
+	## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+	## 
+	## Residual standard error: 43.46 on 23 degrees of freedom
+	## Multiple R-squared:  0.7012, Adjusted R-squared:  0.6882 
+	## F-statistic: 53.96 on 1 and 23 DF,  p-value: 1.794e-07
+\end{verbatim}
+
+\begin{itemize}
+	\item Intercept: corte con eje $\beta_0$
+	\item x: es la pendiente $\beta_1$
+	\item Std. Error: Son los errores estándar de cada estimador (lo que multiplica la t en los intervalos de confianza).
+	\item t value: es el Tcalculado para cada estimador
+	\item Multiple R-squared: Es el coeficiente de determinación o $R^2$ (R es el coeficiente de correlación)
+	\item $Pr(>|t|)$: son los p-valores (los símbolos del final indican la significancia)
+	\item Residual standard error: desviación típica de los errores $\sigma$. Es $S=\sqrt{MSE}=\sqrt{\frac{SSE}{n-k-1}}$, $k$ es el número de variables
+	\item $SCE=S^2*gl$
+	\item Error cuadrático medio es lo mismo que la varianza
+\end{itemize}
+
+\subsection{Anova de la regresión}
+
+
+
+\begin{tabular}{lcccc}
+	\hline
+	Fuente de variación & Suma de cuadrados & Grados de libertad & Cuadrado medio & fcal\\
+	\hline
+	Regresión & SCR & k & $SCR=\dfrac{SCR}{k}$ & $\dfrac{SCR}{S^2}$\\
+	Error & SCE & n-k-1 & $S^2=\dfrac{SCE}{n-k-1}$ & \\
+	\hline
+	\hline
+	Total & STC & n-1
+\end{tabular}
+
+\begin{itemize}
+	\item $SCE=S_{yy}-\beta_1S_{xy}$
+	\item $SCR=\sum_{i=1}^{n}(\hat{y}_i-\overline{y})^2=\dfrac{S_{xy}^2}{S_{xx}}$
+	\item Hipótesis: $H_0=\beta_1=0$ y $H_a=\beta_1\not = 0$
+	\item Se rechaza $H_0$ si $fcal>f_\alpha$ con k grados de libertad en el numerador y n-k-1 grados de libertad en el denominador. Si se rechaza concluimos que hay una cantidad significativa de variación en la respuesta justificada por el modelo postulado, que es la función de la línea recta. K es el número de variables en la regresión.
+\end{itemize}
+
+\subsection{Anova de un factor}
+Técnica de constraste de hipótesis que sirve para comparar 2 tipos de variables. Se compara la relación entre grupos. La variable independiete es la categórica y la variable dependiente es una variable numérica. Se comparan las medias de las variables dependientes entre los grupos con la variable independiente.
+\begin{enumerate}
+	\item Obtener la media de cada categoría
+	\item Obtene la media global $M_g$
+	\item Obtener la suma de cuadrados total $SC_T=\sum(x_i-M_g)^=\sum x_i^2-\dfrac{(\sum x_i)^2}{n}$
+	\item Calcular la suma de cuadrados de las desviaciones entre la media de cada grupo y la media global $SC_F=\sum n_k(M_k-M_g)^2$ donde $n_k$ es el número de sujetos del grupo k
+	\item Calcular la suma de cuadrados de las desviaciones entre cada dato y la media de su grupo, Suma de cuadrados residual $SC_R=\sum(x_{ik}-M_k)^2$
+	\item Verificar usando $SC_R=SC_T-SC_F$
+	\item Calcular los grados de libertad correspondientes a cada suma de cuadrados.
+	\begin{itemize}
+		\item n-1 para $SC_T$, n es el total de individuos
+		\item k-1 para $SC_F$, k es el número de grupos o factores
+		\item n-k para $SC_R$, 
+	\end{itemize}
+	\item Calculas las medias cuadráticas $MC_F=\dfrac{SC_F}{k-1}$ $MC_R=\dfrac{SC_R}{n-k}$ $MC_T=\dfrac{SC_T}{n-1}$
+	\item $F=\dfrac{MC_F}{MC_R}$ con k-1 gl num y n-k gl den
+	\item Concluir, es una prueba de cola derecha
+\end{enumerate}
+\subsection{SABANA}
+
+\begin{tabular}{ccccc}
+	\hline
+	Categ 1 & Categ 2 & Categ 3 & \dots & Categ k\\
+	\hline
+	$y_{11}$ & $y_{12}$ & $y_{13}$ & \dots & $y_{1k}$\\
+	$y_{21}$ & $y_{22}$ & $y_{23}$ & \dots & $y_{2k}$\\
+	\vdots   & \vdots   & \vdots   & \vdots& \vdots\\
+	$y_{n_11}$ & $y_{n_22}$ & $y_{n_323}$ & \dots & $y_{n_kk}$
+\end{tabular}\\
+
+\begin{itemize}
+	\item $n=n_1+n_2+\cdots+n_k$
+	\item $\overline{y}_i=\sum\dfrac{y_i}{n_i}$
+	\item k: cantidad e categorías
+	\item n: Cantidad de datos en la tabla
+\end{itemize}
+
+\subsubsection{Hipótesis}
+$H_0$: Las medias son iguales
+
+$H_a$: al menos un par de medias es diferente
+
+\subsubsection{Tabla Anova}
+\begin{tabular}{lcccc}
+	\hline
+	Fuente de variación & Suma de cuadrados & Grados de libertad & Cuadrados medios & fcal\\
+	\hline
+	Categorías (Entre grupos) & SCTR & k-1 & $S_1^2=\dfrac{SCTR}{k-1}$ & $\dfrac{S_1^2}{S_2^2}$\\
+	Error (Dentro de Grupos) & SCE & n-k & $S_2^2=\dfrac{SCE}{n-k}$ & \\
+	\hline
+	\hline
+	Total & SCT & n-1
+\end{tabular}
+
+\begin{itemize}
+	\item $SCTR$: suma de cuadrados del tratamiento
+	\item $SCTR=\sum n_i(\overline{y}_i-\overline{y})^2$, $n_i$: cantidad de filas de cada categoría, $\overline{y}_i$: media de cada categoría, $\overline{y}$: media general
+	\item $SCE$: suma de cuadrados del error
+	\item $SCE=\sum\sum(y_{ij}-\overline{y}_i)^2$, $y_{ij}$: cada dato de la tabla
+	\item $SCT$: suma de cuadrados totales
+	\item $SCT=\sum\sum(y_{ij}-\overline{y})^2$
+\end{itemize}
+
+\subsection{JAVERIANA}
+
+\begin{tabular}{lccccc}
+	\hline
+	&Categ 1 & Categ 2 & \dots & Categ k\\
+	\hline
+	&$y_{11}$ & $y_{12}$ & \dots & $y_{1k}$\\
+	&$y_{21}$ & $y_{22}$ & \dots & $y_{2k}$\\
+	&\vdots   & \vdots    & \vdots& \vdots\\
+	&$y_{n_11}$ & $y_{n_22}$ & \dots & $y_{n_kk}$\\
+	\hline
+	Tamaños & $n_1$ & $n_2$ & \dots & $n_k$\\
+	\hline
+	Promedios & $\overline{x}_1$ & $\overline{x}_2$ & \dots & $\overline{x}_k$\\
+	\hline
+	Varianzas & $S_1^2$ & $S_2^2$ & \dots & $S_k^2$
+\end{tabular}
+
+\begin{itemize}
+	\item $\overline{x}_T=\dfrac{\overline{x}_1n_1+\dots+\overline{x}_kn_k}{n_1+\dots+n_k}$
+	\item $M(S^2)=\dfrac{S^2_1n_1+\dots+S^2_kn_k}{n_1+\dots+n_k}$
+	\item $V(\overline{x})=\dfrac{(\overline{x}_1-\overline{x}_T)^2n_1+\dots+(\overline{x}_k-\overline{x}_T)^2n_k}{n_1+\dots+n_k}$
+	\item $S_T^2=M(S^2)+V(\overline{x})$
+\end{itemize}
+
+\subsubsection{Hipótesis}
+$H_0$: Las medias son iguales
+
+$H_a$: al menos un par de medias es diferente
+
+\subsubsection{Tabla Anova}
+\begin{tabular}{lcccc}
+	\hline
+	Fuente de variación & Suma de cuadrados & Grados de libertad & Cuadrados medios & fcal\\
+	\hline
+	(Entre grupos) & $SCT=nV(\overline{x})$ & k-1 & $CMt=\dfrac{SCT}{k-1}$ & $\dfrac{CMT}{CME}$\\
+	(Dentro de Grupos) & $SCE=nM(S^2)$ & n-k & $CME=\dfrac{SCE}{n-k}$ & \\
+	\hline
+	\hline
+	Total & $SCT=nV_T(x)$ & n-1
+\end{tabular}
+
+\begin{itemize}
+	\item $SCT$: suma de cuadrados del tratamiento
+	\item $SCE$: suma de cuadrados del error
+	\item $SCT$: suma de cuadrados totales
+	\item Se usa $F_{(\alpha,k-1,n-k)}$
+\end{itemize}
+
+
+\subsection{Anova de dos factores}
+
+\subsection{SABANA}
+Pag 569 walpole
+
+n es la cantidad de réplicas
+
+\begin{tabular}{lcccc}
+	\hline
+	Fuente de variación & Suma de cuadrados & Grados de libertad & Cuadrados medios & fcal\\
+	\hline
+	A & SCA & a-1 & $S_1^2=\dfrac{SCA}{a-1}$ & $f_1=\dfrac{S_1^2}{S^2}$\\
+	B & SCB & b-1 & $S_2^2=\dfrac{SCB}{a-1}$ & $f_2=\dfrac{S_2^2}{S^2}$\\
+	Interacción & SCAB & (a-1)(b-1) & $S_3^2=\dfrac{SCAB}{(a-1)(b-1)}$ & $f_3=\dfrac{S_3^2}{S^2}$\\
+	Error & SCE & ab(n-1) & $S^2=\dfrac{SCE}{ab(n-1)}$ \\
+	\hline
+	\hline
+	Total & $SCT$ & abn-1
+\end{tabular}
+
+\subsection{JAVERIANA}
+
+n es filas por columnas
+
+\begin{tabular}{p{2cm}p{3cm}p{2cm}p{4cm}p{2cm}}
+	\hline
+	Fuente de variación & Suma de cuadrados & Grados de libertad & Cuadrados medios & fcal\\
+	\hline
+	Entre tratamientos(fil) & $SCf=nV(\overline{x_f})$ & f-1 & $CMf=\dfrac{SCf}{f-1}$ & $f_1=\dfrac{CMF}{CME}$\\
+	Entre bloques(col) & $SCc=nV(\overline{x_c})$ & c-1 & $CMc=\dfrac{SCc}{c-1}$ & $f_2=\dfrac{CMc}{CME}$\\
+	Interacción & $SCE=SCT-SCf-SCc$ & (f-1)(c-1) & $CME=\dfrac{SCE}{(f-1)(c-1)}$ \\
+	\hline
+	\hline
+	Total & $SCT=nV_T(x)$ & n-1
+\end{tabular}
+
+
+

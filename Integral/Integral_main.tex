@@ -1,0 +1,378 @@
+\section{INTEGRAL}
+
+
+\subsection{Tabla de Integrales}
+\begin{tabular}{ll}
+	\hline \hline
+	Función & Integral\\
+	\hline
+	$\#$ & $\#x+c$\\
+	$x$ & $x^2+c$\\
+	$x^n$ & $\dfrac{x^{n+1}}{n+1}+c$\\
+	$\dfrac{1}{x}$ & $\ln|x|+c$\\
+	$e^x$ & $e^x+c$\\
+	$\#^x$ & $\dfrac{\#^x}{\ln(\#)}+c$\\
+	$sin(x)$ & $-cos(x)+c$\\
+	$cos(x)$ & $sen(x)+c$\\
+	$sec^2(x)$ & $tan(x)+c$\\
+	$sec(x)tan(x)$ & $sec(x)+c$\\
+	$csc^2(x)$ & $-cot(x)+c$\\
+	$csc(x)cot(x)$ & $-csc(x)+c$\\
+	$tan(x)$ & $\ln|sec(x))|+c$\\
+	$sec(x)$ & $\ln|sec(x)+tan(x)|+c$\\
+	$\dfrac{1}{1+x^2}$ & $arctan(x)+c$\\
+	$\dfrac{1}{\sqrt{1-x^2}}$ & $arcsen(x)+c$\\
+	$\dfrac{1}{x\sqrt{x^2-1}}$ & $arcsec(x)+c$\\
+	$\dfrac{1}{ax+b}$ & $\dfrac{\ln|ax+b|}{a}+c$\\
+	$sin(\#x)$ & $\dfrac{-cos(\#x)}{\#}+c$\\
+	$\dfrac{1}{\#+x^2}$ & $\dfrac{1}{\sqrt{\#}}arctan\left( \dfrac{x}{\sqrt{\#}}\right) +c$\\
+	\hline
+\end{tabular}\\
+
+\subsection{Sustitución}
+Es un cambio de variable para hacer la integral más fácil.
+\begin{enumerate}
+	\item Para escoger u, $u=algo$
+	\begin{itemize}
+		\item $arc\underline{\ \ \ }$
+		\item $\sqrt{algo}$
+		\item $e^{algo}$
+		\item $(algo)$
+		\item $\dfrac{1}{algo}$
+		\item u nunca puede ser solo x o un $\#$
+	\end{itemize}
+	\item Derivar u
+	\item Despejar dx
+	\item Reemplazar en la integral y cancelar. Si no se cancela:
+	\begin{itemize}
+		\item La sustitución está mal o
+		\item Toca despejar de la sustitución original.
+	\end{itemize}
+	\item Resolver
+	\item Reemplazar u
+\end{enumerate}
+
+\subsection{Partes}
+La regla dice $I=uv-\int vdu$
+\begin{enumerate}
+	\item Escoger u
+	\begin{itemize}
+		\item \textbf{I}nversas trigonométricas
+		\item \textbf{L}ogaritmos
+		\item \textbf{A}algebraicas
+		\item \textbf{T}rigonométricas
+		\item \textbf{E}xponenciales
+	\end{itemize}
+	\item Escoger dv, que es lo que queda al escoger u.
+	\item Derivar u, no olvidar el dx
+	\item Integrar dv
+	\item Aplicar regla
+	\item Resolver integral que queda por cualquier método.
+\end{enumerate}
+
+\subsubsection{Tablas}
+
+$$\int x^ne^{algo lineal}dx\qquad\int x^ncos(algo lineal)dx\qquad \int x^nsen(algo lineal)dx$$
+
+\subsection{Cíclicas}
+
+$$\int e^xcos(algo lineal)dx\qquad \int e^xsen(algo lineal)dx\qquad \int e^x\#^xdx$$
+\subsection{Trigonométricas}
+$$\int sen^n(x)cos^m(x)dx$$
+\begin{itemize}
+	\item Si la potencia del seno es impar
+	\begin{enumerate}
+		\item Guardar un seno.
+		\item Los senos restantes cambiarlos por coseno, $sen^2(x)=1-cos^2(x)$.
+		\item Usar sustitución con $u=cos(x)$.
+	\end{enumerate}
+	\item Si la potencia del coseno es impar
+	\begin{enumerate}
+		\item Guardar un coseno.
+		\item Los cosenos restantes cambiarlos por seno, $cos^2(x)=1-sen^2(x)$.
+		\item Usar sustitución con $u=sen(x)$.
+	\end{enumerate}
+	\item Si ambas potencias son pares
+	\begin{enumerate}
+		\item Cambiar seno y coseno por $sen^2(x)=\dfrac{1-cos(2x)}{2}$ y $cos^2(x)=\dfrac{1+cos(2x)}{2}$
+		\item Los cosenos restantes cambiarlos por seno, $cos^2(x)=1-sen^2(x)$.
+		\item Usar sustitución con $u=sen(x)$.
+	\end{enumerate}
+	\item Recordar que $sen(x)cos(x)=\dfrac{1}{2}sen(2x)$
+\end{itemize}
+
+$$\int sec^n(x)tan^m(x)dx$$
+\begin{itemize}
+	\item Si la potencia del secante es par
+	\begin{enumerate}
+		\item Guardar un $sec^2(x)$.
+		\item Los secantes restantes cambiarlos por tangente, $sec^2(x)=1+tan^2(x)$.
+		\item Usar sustitución con $u=tan(x)$.
+	\end{enumerate}
+	\item Si la potencia del tangente es impar
+	\begin{enumerate}
+		\item Guardar un $sec(x)tan(x)$.
+		\item Los tangente restantes cambiarlos por secante, $tan^2(x)=sec^2(x)-1$.
+		\item Usar sustitución con $u=sec(x)$.
+	\end{enumerate}
+	
+\end{itemize}
+
+\subsection{Sustitución Trigonométrica}
+\begin{enumerate}
+	\item Raiz cuadrada
+	\item Otro exponente
+	\item Completación de cuadrados
+	\item Número acompañando a $x^2$
+\end{enumerate}
+
+
+\subsection{Fracciones Parciales}
+\begin{itemize}
+	\item Si el grado del numerador es mayor que el grado del denominador, hacer división larga o división de polinomios y luego a aplicar fracciones parciales a la fracción que queda.
+	\item Fracciones parciales
+	\begin{enumerate}
+		\item Factorizar el denominador
+		\item Abrir en fracciones parciales
+		\begin{itemize}
+			\item Factores lineales, no tienen exponentes.
+			\item Factores repetidos.
+			\item Factores no lineales.
+		\end{itemize}
+		\item Encontrar constantes
+		\item Integrar cada fracción.
+	\end{enumerate}
+\end{itemize}
+
+\subsection{Sucesiones}
+\begin{itemize}
+	\item Una sucesión converge si $\lim\limits_{x -> \infty}a_n =\#$	
+	\item Una sucesión diverge si $\lim\limits_{x -> \infty}a_n = \pm\infty$	
+	\item Una sucesión es decreciente si $a_{n+1}<a_n$
+	\item Una sucesión creciente si $a_{n+1}>a_n$
+\end{itemize}
+
+
+\textbf{Ejercicios}
+\begin{enumerate}
+	\item $a_n=ln(n+1)-ln(n)$
+	\item Diga si converge y encuentre el límite.\\	
+	$a_1=1$\\	
+	$a_n=1+\dfrac{1}{1+a_{n-1}}$
+	\item Demuestre que la sucesión definida por:\\
+	$a_1=2$\\ 
+	$a_{n+a}=\dfrac{1}{3-a_n}$\\
+	\textit{Hint:} Se asume que todos los $a_n$, $a_{n+1}$, $a_{n-1}$... Convergen a L y se saca límite a ambos lados.
+\end{enumerate}
+\subsection{Series }
+\subsubsection{Serie Geométricas}
+Se usa cuando se tiene $\#^n$
+ 
+\begin{itemize}
+	\item Reescribir para que se parezca a $\sum_{n=0}^{\infty}ar^n$
+	\item Si $|r|<1$ converge
+	\item Si $|r|\ge1$ diverge
+\end{itemize}
+
+Si piden la suma o el valor al que converge:
+
+\begin{itemize}
+	\item $\sum_{n=0}^{\infty}ar^n\rightarrow s=\dfrac{a}{1-r}$
+	\item $\sum_{n=1}^{\infty}ar^n\rightarrow s=a\left( \dfrac{1}{1-r}-r^0 \right) $
+	\item $\sum_{n=2}^{\infty}ar^n\rightarrow s=a\left( \dfrac{1}{1-r}-r^0-r^1 \right) $
+\end{itemize}
+\subsubsection{Criterio de la divergencia}
+Se usa con "Todos".
+
+\begin{itemize}
+	\item Hacer $\lim\limits_{n -> \infty} a_n$
+	\item Si de un $\#$ diverge
+	\item Si da 0 no concluye
+\end{itemize}
+\subsubsection{Series Telescópicas}
+Solo se usa si se tiene "Resta de raíces", "Logaritmos", $\dfrac{polinomio}{polinomio}$  y el denominador se puede factorizar y solo se usa si dicen calcule su suma o diga a donde converge.\\
+\textbf{Pasos}
+\begin{enumerate}
+	\item Factorizar el denominador
+	\item Fracciones parciales
+	\item abrir la serie\\
+	Derecha $n=min, min+1, min+2\dots$ hasta que se cancelen 2 términos seguidos.\\
+	Izquierda $n=n, n-1, n-2\dots$ hasta que se cancelen 2 términos seguidos.
+	\item $s_n$ es lo que no se cancela.
+	\item $\lim\limits_{n -> \infty} s_n$ Si da un $\#$ converge y converge a ese $\#$. Si da infinito diverge.
+\end{enumerate}
+\subsubsection{Criterio de la integral}
+Se usa como última opción, cuando se tienen $\ln$ o una integral fácil (sustitución o partes sencillas).
+
+\textbf{Pasos}
+\begin{enumerate}
+	\item Continua. Encontrar el dominio y concluir.
+	\item Positiva. Mirar el tipo de función que se tiene y concluir.
+	\item Decreciente. Derivar y hacer tabla de signos con 2 números o hacer $a_{n+1}<a_n$.
+	\item Resolver la integral. Usar integrales impropias.
+	\item Si la integral da un $\#,\ \sum_{n=0}^{\infty}$ converge. Si da $\pm\infty$ diverge.
+\end{enumerate}
+\subsubsection{P-series}
+Se usa cuando se tiene $\dfrac{1}{n^p}$ y p es un $\#$. 
+\begin{itemize}
+	\item Si $|p|>1$ converge
+	\item Si $|p|\le1$ diverge
+\end{itemize}
+\subsubsection{Criterio de comparación}
+Se usa para trigonométricas o logaritmos\\
+\textit{Hint:} $$-1\leq sen(algo)\leq 1$$ $$-1\leq cos(algo)\leq 1$$ $$-\dfrac{\pi}{2}\leq tan^{-1}(algo)\leq \dfrac{\pi}{2}$$ $$\ln(n)\leq n$$ $$\dfrac{1}{n^2+algo}<\dfrac{1}{n^2}$$ $$\dfrac{1}{\#^n+algo}<\dfrac{1}{\#^n}$$ $$\dfrac{1}{n-algo}>\dfrac{1}{n}$$
+
+\begin{itemize}
+	\item Si $a_n\le b_n$ y $\sum b_n$ converge, entonces $\sum a_n$ converge
+	\item Si $a_n\ge b_n$ y $\sum b_n$ diverge, entonces $\sum a_n$ diverge
+\end{itemize}
+
+\subsubsection{Criterio de comparación en el límite}
+
+\textbf{Pasos}
+\begin{enumerate}
+	\item Encontrar $b_n=\dfrac{\text{Término mayor grado num}}{\text{Término mayor grado den}}$
+	\item Ver si $\sum b_n$ converge o diverge.
+	\item Si $\lim\limits_{n -> \infty}\dfrac{a_n}{b_n}=\#$ entonces si $\sum b_n$ converge $\sum a_n$ converge, pero si $\sum b_n$ diverge entonces $\sum a_n$ diverge. (Si hay raíz o exponente no hacer l'hopital sino dividir por la mayor potencia del denominador).
+\end{enumerate}
+
+\subsubsection{Series Alternantes}
+Tiene $(-1)^n$, estas también se podrían hacer por criterio de la razón.
+
+\begin{itemize}
+	\item Hacer la serie sin $(-1)^n$ por cualquier otro método. Si converge, $\sum a_n$  converge absolutamente. Si diverge, pasar al paso 2
+	\item Serie alternante. Hacer $\lim\limits_{n -> \infty}a_n$ sin $(-1)^n$
+	\item Si da 0 mostrar que es decreciente (Derivada) y converge condicionalmente.
+	\item Si da un $\#$ diverge por criterio de divergencia 
+	
+\end{itemize}
+
+\subsubsection{Criterio de la razón o cociente}
+$n!$ o cualquiera
+
+\begin{itemize}
+	\item Hacer $\lim\limits_{n -> \infty}\left| \dfrac{a_{n+1}}{a_n} \right| $, si
+	\begin{align*}
+	\lim\limits_{n -> \infty}\left| \dfrac{a_{n+1}}{a_n} \right|<&1,\qquad \text{Converge}\\
+	\lim\limits_{n -> \infty}\left| \dfrac{a_{n+1}}{a_n} \right|>&1,\qquad \text{Diverge}\\
+	\lim\limits_{n -> \infty}\left| \dfrac{a_{n+1}}{a_n} \right|=&1,\qquad \text{Usar otro método}\\
+	\end{align*}
+\end{itemize}
+
+\subsubsection{Criterio de la raíz }
+$(Todo)^n$
+
+Se hace $\lim\limits_{n -> \infty}\sqrt[n]{|a_n|}$, si
+
+
+\subsection{Series de Potencias}
+Cuando hay x, preguntan intervalo o radio de convergencia
+
+\textbf{Pasos}
+\begin{enumerate}
+	\item Aplicar criterio de la razón
+	\item Sacar constantes del limite con valor absoluto (lo que tenga x o sea constante).
+	\item Evaluar el límite
+	\begin{itemize}
+		\item Si el límite da cero, $R=\infty$, intervalo de convergencia $(-\infty,\infty)$
+		\item Si el límite da $\infty$, $R=0$, Intervalo de convergencia es un $\#$.
+		\item Si el límite da un $\#$, pasar al paso 4.
+	\end{itemize}
+	\item Poner lo que dió el paso 3 $< 1$ "Siempre".
+	\item Abrir valor absoluto $|algo|<\# \rightarrow -\#<algo<\#$
+	\item Resolver valor absoluto $a<x<b$ y encontrar el radio$=\dfrac{b-a}{2}$
+	\item Reemplazar a y b por separado en la x de la serie original y evaluar si las series resultantes convergen o no. En caso de que converja se incluye el valor del que converja en el intervalo.
+\end{enumerate}
+
+\subsection{Representación en Series de Potencia}
+\textbf{Representaciones conocidas}
+\begin{enumerate}
+	\item $\dfrac{1}{1-x}=\sum_{n=0}^{\infty}x^n \rightarrow \dfrac{1}{1-algo}=\sum_{n=0}^{\infty}(algo)^n$
+	\item $e^x=\sum_{n=0}^{\infty}\dfrac{x^n}{n!} \rightarrow e^{algo}=\sum_{n=0}^{\infty}\dfrac{algo^n}{n!}$
+	\item $\sin(x)=\sum_{n=0}^{\infty}\dfrac{(-1)^nx^{2n+1}}{(2n+1)!} \rightarrow \sin(algo)=\sum_{n=0}^{\infty}\dfrac{(-1)^n(algo)^{2n+1}}{(2n+1)!}$
+	\item $\cos(x)=\sum_{n=0}^{\infty}\dfrac{(-1)^nx^{2n}}{(2n)!} \rightarrow \cos(algo)=\sum_{n=0}^{\infty}\dfrac{(-1)^n(algo)^{2n}}{(2n)!}$
+	\item $\tan^{-1}(x)=\sum_{n=0}^{\infty}\dfrac{(-1)^nx^{2n+1}}{(2n+1)} \rightarrow \tan^{-1}(algo)=\sum_{n=0}^{\infty}\dfrac{(-1)^n(algo)^{2n+1}}{(2n+1)}$
+\end{enumerate}
+
+Se debe tratar de reescribir la que nos dan como una de las anteriores.\\
+\textbf{Ejemplo}
+$f(x)=\dfrac{x}{9+x^2}$
+
+\textbf{Si se tiene ln(algo)}
+\begin{enumerate}
+	\item Se deriva la función
+	\item Representar como serie de potencias.
+	\item Integrar la serie (con respecto a x, lo que tiene x).
+\end{enumerate}
+
+\subsection{Series de Taylor}
+\textbf{Serie de Taylor}: $a\not=0$
+$$f(x)=\sum_{n=0}^{\infty}\dfrac{f^{(n)}(a)(x-a)^n}{n!}$$
+
+\textbf{Serie de Maclaurin}: $a=0$
+$$f(x)=\sum_{n=0}^{\infty}\dfrac{f^{(n)}(0)(x)^n}{n!}$$
+
+\textbf{Pasos}
+\begin{enumerate}
+	\item Derivar hasta encontrar un patrón (Derivada n-ésima).
+	\item Reemplazar el a en x.
+	\item Reemplazar en la fórmula. 
+\end{enumerate}
+
+\textbf{Ejercicio}\\
+Sea $f(x)=ln(4-3x^2)$ encontrar la serie de Taylor centrada en x=0 y calcular $f^{(10)}=0$
+
+\begin{enumerate}
+	\item $f'(x)=\dfrac{1}{4-3x^2}(-6x)=-6x\dfrac{1}{4-3x^2}$
+	\item $-6x\dfrac{\dfrac{1}{4}}{\dfrac{4}{4}-\dfrac{3x^2}{4}}=\dfrac{-6x}{4}\dfrac{1}{1-\dfrac{3x^2}{4}}=\dfrac{-6x}{4}\sum_{n=0}^{\infty}\dfrac{3^nx^{2n}}{4^n}=\dfrac{-6}{4}\sum_{n=0}^{\infty}\dfrac{3^nx^{2n+1}}{4^n}$
+	\item $ln(4-3x^2)=\dfrac{-6}{4}\sum_{n=0}^{\infty}\dfrac{3^nx^{2n+2}}{(2n+2)4^n}$
+	\item b. $\dfrac{-6}{4}\sum_{n=0}^{\infty}\dfrac{3^nx^{2n+2}}{(2n+2)4^n}=f(x)=\sum_{n=0}^{\infty}\dfrac{f^{(n)}(0)(x)^n}{n!}$\\
+	$\dfrac{-6}{4}\dfrac{3^nn!}{(2n+2)4^n}=f^{(n)}(0)$\\
+	$\dfrac{-6}{4}\dfrac{3^{10}10!}{(2*10+2)4^{10}}=f^{(10)}(0)$
+\end{enumerate}
+
+\subsection{Aproximación de Taylor}
+\textbf{Aproximación lineal}
+
+$$L(x)=f(a)+f'(a)(x-a)$$
+
+\textbf{Aproximación con polinomio de grado n}
+
+$$P_n(x)=f(a)+f'(a)(x-a)+\dfrac{f''(a)(x-a)^2}{2}+\dots+\dfrac{f^{(n)}(a)(x-a)^n}{n!}$$
+
+
+\subsection{Excedentes de consumidor y productor}
+Triángulo superior, lo que se deja de consumir, lo que están dispuestos a pagar de mas por una cantidad menor
+$$EC=\int_{0}^{q^*}Demanda\ dq-p^*q^*\qquad \text{,p despejado}$$
+$$EC=\int_{p^*}^{b}Demanda\ dp \qquad \text{,q despejado}$$
+Triángulo inferior, lo que se deja de consumir, lo que están dispuestos a rebajar por una cantidad menor
+$$EP=p^*q^*-\int_{0}^{q^*}Oferta\ dq\qquad \text{,p despejado}$$
+$$EP=\int_{a}^{p^*}Oferta\ dp\qquad \text{,q despejado}$$
+
+\subsection{Índice de Gini}
+Lorentz: L(x) es como se distribuye la riqueza en la población
+$$Gini=2\int_{0}^{1}x-L(x)=1-2\int_{0}^{1}L(x)$$
+Entre mas pequeño sea el indice, menor es la desigualdad.
+
+
+
+
+
+\newpage
+%
+%\centering{\textbf{Quiz}
+%\begin{enumerate}
+%	\item Para las siguientes series determine si converge o diverge. Justifique
+%	\begin{enumerate}
+%		\item $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{3+5^n}$
+%		\item $\displaystyle\sum_{n=1}^{\infty}\dfrac{3(n!)^2}{10(2n)!}$
+%		\item $\displaystyle\sum_{n=1}^{\infty}(-1)^n\dfrac{n^n}{n!}$
+%		\item $\displaystyle\sum_{k=2}^{\infty}\dfrac{1}{k\sqrt{\ln k}}$
+%		\item $\displaystyle\sum_{n=1}^{\infty}\dfrac{\sin(2n)}{1+2^n}$
+%	\end{enumerate}
+%	
+%	\item Encuentre el radio e intervalo de convergencia para la siguiente serie
+%	
+%	$$\displaystyle\sum_{k=0}^{\infty}\dfrac{(-2)^k(x+3)^k}{3^{k+1}}$$
+%\end{enumerate}
+

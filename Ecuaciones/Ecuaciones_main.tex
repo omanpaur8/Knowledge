@@ -1,0 +1,239 @@
+\section{ECUACIONES DIFERENCIALES}
+\subsection{Complejos}
+$z=\underbrace{a}_{Real}+\underbrace{bi}_{Imaginario}$
+\begin{itemize}
+	\item Conjugado $\overline{z}=a-bi$
+	\item $\overline{z+w}=\overline{z}+\overline{w}$, $\overline{zw}=\overline{z}\overline{w}$, $\overline{z^n}=\overline{z}^n$
+	\item Módulo $|z|=\sqrt{a^2+b^2}$, $z\overline{z}=|z|^2$
+	\item Forma polar $z=r(\cos(\theta)+i\sin(\theta))$, $r=|z|=\sqrt{a^2+b^2}$, $\theta=arctan(\dfrac{b}{a})$
+	\item $z_1z_2=r_1r_2[\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)]$
+	\item $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}[\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2)]$
+	\item $\dfrac{1}{z}=\dfrac{1}{r}(\cos(\theta)-i\sin(\theta))$
+	\item Teorema de MOIVRE. Si $z=r(\cos(\theta)+i\sin(\theta))$, entonces $z^n=[r(\cos(\theta)+i\sin(\theta))]^n=r^n(\cos(n\theta)+i\sin(n\theta))$ 
+	\item Exponencial compleja. $e^{iy}=\cos(y)+i\sin(y)$
+\end{itemize}
+
+Una ecuación diferencial es cuando en una ecuación hay una variable y derivadas de esa variable. Ejemplo $y''+5y'+y=0$
+
+\subsection{Primer orden}
+Cuando hay primera derivada.
+\subsubsection{Variables separables}
+Este método se puede aplicar si la ecuación se puede escribir como
+$\dfrac{dy}{dx}=\underbrace{g(x)}_{Solo\ hay\ x}\underbrace{f(y)}_{Solo\ hay\ y}$, es decir de puede factorizar todo lo que tiene x o todo lo que tiene y.
+\begin{enumerate}
+	\item Separar, dejar todo lo que tiene y a un lado del igual y lo que tiene x al otro lado. (Pasar a multiplicar o dividir).
+	\item Pasar el dx a multiplicar
+	\item Integrar a ambos lados y poner +c al lado derecho.
+	\item Despejar y si se puede.
+\end{enumerate}
+
+Si la ecuación solo depende del tiempo se llama ecuación diferencial puramente temporal.
+Si la ecuación no depende del tiempo de llama autónoma.
+
+\textbf{Mezclas}
+
+\begin{align*}
+	\dfrac{dy}{dt}=&\text{Proporción de entrada}-\text{Proporción de salida} \\
+	=& V_eC_e-V_sC_s
+\end{align*}
+\begin{itemize}
+	\item $V_e$: Velocidad de entrada (Flujo)
+	\item $C_e$: Concentración de entrada
+	\item $V_s$: Velocidad de salida (Flujo)
+	\item $C_s$: Concentración de salida
+	\item $C_s=\dfrac{Y}{V(t)}$, el volumen es $V(t)=V_0+(V_e-V_s)t$ 
+\end{itemize}
+
+\textbf{Crecimiento logístico}
+
+\textbf{Ley de crecimiento natural}
+
+$$\dfrac{dP}{dt}=kp \qquad \text{Población pequeña}$$
+$$\dfrac{dP}{dt}=kp-m \qquad \text{m:emigración o recolectores}$$
+
+\textbf{Modelo logístico}
+$$\dfrac{dN}{dt}=rN(1-\dfrac{N}{k}) \qquad \text{L: Capacidad de soporte, k:Tasa de variación}$$
+
+\begin{itemize}
+	\item Separación de variables
+	\item Fracciones parciales
+\end{itemize}
+
+\textbf{Crecimiento alométrico}
+$\dfrac{1}{L_1}\dfrac{dL_1}{dt}=k\dfrac{1}{L_2}\dfrac{dL_2}{dt}$ Si k=1 se llama isométrico de lo contrario alométrico.
+
+\subsubsection{Factor integrante}
+Tiene la forma $\dfrac{dy}{dx}+P(x)y=Q(x)$
+
+\begin{enumerate}
+	\item Se encuentra el factor integrante $e^{\int P(x)dx}$
+	\item Multiplicar a ambos lados por el factor integrante (Al lado izquierdo queda la derivada de un producto)
+	\item Integrar a ambos lados
+	\item Despejar y
+\end{enumerate}
+
+\subsubsection{Ecuación de Bernoulli}
+Tiene la forma $\dfrac{dy}{dx}+P(x)y=Q(x)y^n$
+
+\begin{enumerate}
+	\item Encontrar sustitución $u=y^{1-n}$
+	\item Transformar ecuación $\dfrac{du}{dx}+(1-n)P(x)u=(1-n)Q(x)$ o reemplazar la sustitución y dividir todo por lo que acompaña a $\dfrac{du}{dx}$
+	\item Aplicar factor integrante y despejar u
+	\item Reemplazar u y despejar y
+\end{enumerate}
+
+\subsection{Segundo Orden}
+Tienen la forma $$P(x)\dfrac{d^2y}{dx^2}+Q(x)\dfrac{dy}{dx}+R(x)y=G(x)$$
+$$ay''+by'+cy=G(x)$$
+
+\subsubsection{Homogéneas}
+Si G(x)=0 se llama homogénea
+
+	\begin{enumerate}
+		\item Encontrar las raíces (Factorizar o cuadrática)
+		\item Si $r_1\not= r_2$ reales y distintas $y=c_1e^{r_1x}+c_2e^{r_2x}$
+		\item Si $r_1=r_2=r$ $y=c_1e^{rx}+c_2xe^{rx}$
+		\item Si $r_1$ y $r_2$ son complejas $a+ib$  $y=e^a(c_1\cos(bx)+c_2\sin(bx))$
+	\end{enumerate}
+\subsubsection{No Homogéneas}
+Si $G(x)\not =0$ se llama no homogénea y
+$y=y_p+y_h$
+\begin{itemize}
+	\item Coeficientes Indeterminados
+	\begin{enumerate}
+		\item Encontrar solución homogénea
+		\item Para encontrar la solución particular se asume que la solución tiene la forma general de G(x)
+		
+		\begin{tabular}{c|c}
+			$G(x)$&$y_p$\\
+			\hline
+			$x$&$ax+b$\\
+			$x^2$ & $ax^2+bx+c$\\
+			$e^{ax}$ & $ke^{ax}$\\
+			$sen(x)$ o $cos(x)$ & $Acos(x)+Bsen(x)$
+		\end{tabular}
+	
+		Si algún término de $y_p$ es una solución de la ecuación homogénea o complementario, multiplicar $y_p$ por $x$ o $x^2$
+		\item Encontrar $y''_p$ y $y'_p$
+		\item Reemplazar en la ecuación diferencial y encontrar constantes por términos semejantes.
+		\item Escribir solución completa
+	\end{enumerate}
+	\item Variación de parámetros
+	\begin{enumerate}
+		\item Encontrar solución homogénea $y=c_1y_1(x)+c_2y_2(x)$
+		\item Para $y_p$ se reemplaza $c_1$ y $c_2$ por $u_1(x)$+ $u_2(x)$
+		$$y_p=u_1y_1+u_2y_2$$
+		\item Se asume $u'_1y_1+u'_2y_2=0$ y $u'_1y'_1+u'_2y'_2=G(x)$
+		\item Resolver 1 y 2 para despejar $u'_1$ y $u'_2$
+		\item Calcular $W=\left| \begin{array}{cc}
+		y_1 & y_2\\
+		y'_1 & y'_2
+		\end{array}\right| $ $u'_1=\dfrac{\left| \begin{array}{cc}
+			0 & y_2\\
+			G(x) & y'_2
+			\end{array}\right| }{W}$ $u'_2=\dfrac{\left| \begin{array}{cc}
+			y_1 & 0\\
+			y'_1 & G(x)
+			\end{array}\right| }{W}$
+		\item Integrar $u'_1$ y $u'_2$
+		\item Escribir solución completa
+	\end{enumerate}
+\end{itemize}
+
+\subsection{Ecuaciones Paramétricas}
+
+$$x=f(t)\qquad y=g(t)$$
+X y Y dependen una tercera variable
+
+\subsubsection{Para gráficar curvas parámetricas}
+
+\begin{itemize}
+	\item Método 1
+	\begin{enumerate}
+		\item Dar valores a t y tabular
+		\item Ubicar parejas (x,y)
+		\item Marcar dirección.
+	\end{enumerate}
+	\item Método 2
+	\begin{itemize}
+		\item Despejar t de alguna ecuación y reemplazar en la otra para eliminar t.
+		\item Despejar y si se puede o ver si es ecuación de círculo
+		\item Graficar función resultante
+	\end{itemize}
+\end{itemize}
+
+\subsection{Ecuaciones paraméticas conocidas}
+
+\begin{itemize}
+	\item Básica $x=t, y=f(t)$ o $x=f(t), y=t$
+	\item Circunferencia con centro en (h,k) y radio r$$x=h+rcos(t)\qquad y=k+rsin(t)$$
+	\item Elipse $$x=acos(t)\qquad y=bsin(t)$$
+\end{itemize}
+
+\subsubsection{Primera y segunda derivada}
+
+\begin{itemize}
+	\item Primera derivada
+	$$\dfrac{dy}{dx}=\dfrac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}$$
+	\item Segunda derivada
+	$$\dfrac{d^2y}{dx^2}=\dfrac{d}{dx}\left( \dfrac{dy}{dx}\right) =\dfrac{\dfrac{d}{dt}\left( \dfrac{dy}{dx}\right) }{\dfrac{dx}{dt}}$$
+\end{itemize}
+
+\subsection{Tangentes}
+
+\begin{itemize}
+	\item Si dan punto en coordenadas rectangulares $(x_0,y_0)$
+	\begin{enumerate}
+		\item Reemplazar en ecuaciones paramétricas y despejar t, pueden dar varios.
+		\item Encontrar primera derivada
+		\item Reemplazar t en la derivada para hallar m
+		\item Armar recta $y=m(x-x_0)+y_0$
+	\end{enumerate}
+	\item Si dan t
+	\begin{enumerate}
+		\item Reemplazar t en ecuaciones paramétricas para hallar punto $(x_0,y_0)$
+		\item Encontrar primera derivada
+		\item Reemplazar t en la derivada para hallar m
+		\item Armar recta $y=m(x-x_0)+y_0$
+	\end{enumerate}
+	\item Si preguntan tangente horizontal
+	\begin{enumerate}
+		\item Igualar numerador de la derivada a cero ($\dfrac{dy}{dt}$)
+		\item Despejar t, puede dar varios
+		\item Reemplazar en ecuaciones paramétricas para hallar puntos (x,y)
+	\end{enumerate}
+	\item Si piden tangente vertical
+	\begin{enumerate}
+		\item Igualar denominador de la derivada a cero ($\dfrac{dx}{dt}$)
+		\item Reemplazar en ecuaciones paramétricas para hallar puntos (x,y)
+	\end{enumerate}
+\end{itemize}
+
+\subsubsection{Área}
+
+$$A=\int^b_a ydx=\int_{t_1}^{t_2} g(t)f'(t)dt$$
+\begin{itemize}
+	\item Encontrar $t_1$ y $t_2$
+	\item Derivar la ecuación de x
+	\item Armar integral y resolver
+\end{itemize}
+
+\subsubsection{Longitud de arco}
+$$L=\int^{t_2}_{t_1}\sqrt{\left( \dfrac{dy}{dt} \right)^2 +\left( \dfrac{dx}{dt} \right)^2}dt$$
+
+\begin{itemize}
+	\item Encontrar $t_1$ y $t_2$
+	\item Derivar la ecuación de x y la ecuación de y y elevar cada una al cuadrado.
+	\item Operar en lo posible para que quede $(algo)^2$ y se pueda cancelar la raíz.
+	\item Armar integral y resolver
+\end{itemize}
+
+\subsection{Polares}
+
+\subsubsection{Área}
+
+$$A=\dfrac{1}{2}\int^b_a r^2d\theta$$
+$$A=\dfrac{1}{2}\int^b_a f^2-g^2d\theta$$
+
+\subsubsection{Longitud de arco}
+$$L=\int^b_a\sqrt{ r^2+\left( \dfrac{dr}{d\theta} \right)^2}d\theta$$

@@ -1,0 +1,77 @@
+\section{HERRAMIENTAS 1}
+
+\subsection{Análisis Factorial}
+
+\begin{itemize}
+	\item Comandos 
+	\begin{itemize}
+		\item Para aplicar análisis factorial \textbf{factor var1 var2 varn ,pcf}
+		\item Para predecir \textbf{predict factor$\#$} o \textbf{predict f$\#$}
+		\item Grafica los autovalores \textbf{screeplot}
+		\item Grafica los autovalores con linea en 1 \textbf{screeplot, yline(1)}
+		\item Grafica los autovalores incluyendo lineas en los ejes \textbf{screeplot, yline(0) xline(0)}
+		\item Grafica las cargas \textbf{loadingplot}
+		\item Grafica las cargas incluyendo lineas en los ejes \textbf{loadingplot, yline(0) xline(0)}
+		\item Grafica la gráfica de dispersión de F1 y F 2 \textbf{scoreplot}
+		\item Correlación \textbf{corr}
+		\item Graficar matriz de variables \textbf{graph matrix var1 var2 var3, half};
+	\end{itemize}
+	
+	\begin{itemize}
+		\item polychoric 
+		\item matrix m= r(R)
+		\item global N= r(N)
+		\item factormat m, n(\$N)
+		\item rotate
+		\item predict factor1-factor3
+		\item summarize factor1-factor3
+		\item by P49, sort : summarize factor1 factor2 factor3
+	\end{itemize}
+	
+	\item Los factores relevantes son aquellos que tienen autovalores mayores a 1 y estos explican \textit{cumulative} de la varianza o variabilidad de las variables.
+	\item Para realizar el análisis de cargas se ven aquellas que tienen el valor más alto en cada factor y se ve cual puede ser el motivo dependiendo del tipo de dato. 
+	\item La \textit{proportion} significa el porcentaje de varianza de las variables que explica un factor.
+	\item El valor de \textit{Uniqueness} representa la varianza de la variable que no está asociada con la varianza de los factores relevantes.
+	\item Análisis factorial es parte del análisis multivariado debido a que se concentra en la relación interna entre un conjunto de variables.
+\end{itemize}
+
+\subsection{Análisis de Clusters}
+
+También es conocida como agrupación jerárquica, realiza la agrupación de objetos objetos similares e identifica niveles de jerarquía entre varios niveles de agregación. Las jerarquías se pueden representar de forma esquemática mediante dendrogramas. Para determinar a que cluster pertenece una muestra se suelen usar métricas de distancia como la distancia mas corta (single linkage), la distancia promedio (average linkage) o la distancia mas lejana (complete linkage)
+
+\begin{itemize}
+	\item Para reducir la muestra \textbf{set seed 123456789
+		sample 10}
+	\item Para aplicar clusters \textbf{cluster singlelinkage var1 var2, name(cluster name sl)} \textbf{cluster averagelinkage var1 var2, name(cluster name sl);} \textbf{cluster completelinkage var1 var2, name(cluster name sl);}
+	\item Para pintar el dendrograma se puede usar 
+	\begin{itemize}
+		\item cluster dendrogram cluster name, cutnumber(n)  name(graph name)
+		\item cluster dendrogram cluster name, cutnumber(n) labels(cluster name\_id) xlabel(,angle(45)) name(graph name)
+	\end{itemize}
+	\item Crear variable con grupos \textbf{cluster generate cluster group name = groups(n), name(cluster name)}
+	\item Crear tabla con estadísticas de los grupos \textbf{table cluster group name, contents(mean var1 sd var1 n var1) format(\%4.2f)}
+\end{itemize}
+
+\subsection{Anova}
+
+Se plantean hipótesis para establecer si una variable implica una diferencia en otra variable
+\begin{itemize}
+	\item \textbf{anova var1 var2}
+	\item \textbf{graph box var2, over(var1)}
+\end{itemize}
+
+\subsection{Series de Tiempo}
+\begin{itemize}
+	\item Graficar segmentos de una serie \textbf{tsline nombre if tin(fecha1,fecha2)}
+\end{itemize}
+
+\begin{itemize}
+	\item AR: Decae la autocorrelación (si decae rápidamente es estacionario) y 1 rezago significativo o valioso en PAC
+	\item MA: 1 rezago autocorrelacionado y PAC alterna signo
+	\item ARMA: Ambas decaen y se alternan los signos en PAC
+	\item Integrado: si AC decae lentamente y PAC presenta un rezago cercano a 1
+	\item Se puede empezar estimando con un rezago mas del que se cree, a eso se llama modelar de grande a pequeño.
+	\item ARIMA(p,d,q): p es el número de rezagos autoregresivos en PAC, q es el número de rezagos de media móvil.
+	\item Prueba de estacionariedad: dfuller VAR, regress.
+	H0 es que no es estacionaria y Ha es que la serie si es estacionaria
+\end{itemize}
